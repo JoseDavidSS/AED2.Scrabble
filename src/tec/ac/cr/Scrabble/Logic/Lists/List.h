@@ -6,7 +6,25 @@
 #define SCRABBLE_LIST_H
 
 
+#include "Node.h"
+
 class List {
+
+public:
+
+    List() = default;
+
+    Node* head = nullptr;
+
+    int getLenght();
+    void setLenght(int lenght);
+    void insertNode (string letter);
+    void deleteNode (string letter);
+    void printList ();
+
+private:
+
+    int lenght = 0;
 
 };
 
