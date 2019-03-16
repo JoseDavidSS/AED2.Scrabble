@@ -13,9 +13,10 @@ class Node {
 
 public:
 
-    Node(string letters, int points) {
+    Node(string letters, int points, int counters) {
         letter = letters;
         point = points;
+        counter = counters;
     }
 
     //Atributos con los que contará la clase.
@@ -26,12 +27,15 @@ public:
     string getLetter();
     void setPoints(int point);
     int getPoints();
+    void setCounters(int counter);
+    int getCounters();
+
 
 private:
 
     string letter;
     int point;
-
+    int counter;
 };
 
 

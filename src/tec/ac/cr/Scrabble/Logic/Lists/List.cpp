@@ -16,16 +16,16 @@ void List::setLenght(int lenght) {
     this->lenght = lenght;
 }
 
-void List::insertNode(string letter){
+void List::insertNode(string letter, int points, int counter){
     if (this->head == nullptr){
-        this->head = new Node(letter, 1);
+        this->head = new Node(letter, points, counter);
         this->lenght++;
     }else{
         Node* tmp = this->head;
         while (tmp->next != nullptr){
             tmp = tmp->next;
         }
-        tmp->next = new Node(letter, 1);
+        tmp->next = new Node(letter, points, counter);
         this->lenght++;
     }
 }
