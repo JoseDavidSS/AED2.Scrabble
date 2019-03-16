@@ -3,4 +3,4 @@ project(Scrabble)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Scrabble main.cpp)
+add_executable(Scrabble src/tec/ac/cr/Scrabble/Logic/main.cpp)
