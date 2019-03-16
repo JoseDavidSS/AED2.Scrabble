@@ -15,7 +15,13 @@ string Node::getLetter() {
 void Node::setPoints(int point) {
     this->point = point;
 }
+void Node::setCounters(int counter) {
+    this->counter = counter;
+}
 
 int Node::getPoints() {
     return this->point;
+}
+int Node::getCounters() {
+    return this->counter;
 }

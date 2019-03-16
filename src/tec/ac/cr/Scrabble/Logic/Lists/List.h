@@ -18,7 +18,7 @@ public:
 
     int getLenght();
     void setLenght(int lenght);
-    void insertNode (string letter);
+    void insertNode (string letter, int points, int counter);
     void deleteNode (string letter);
     void printList ();
 
