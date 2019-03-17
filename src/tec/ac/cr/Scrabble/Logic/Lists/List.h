@@ -21,6 +21,7 @@ public:
     void insertNode (string letter, int points, int counter);
     void deleteNode (string letter);
     void printList ();
+    void letterSorter();
 
 private:
 
