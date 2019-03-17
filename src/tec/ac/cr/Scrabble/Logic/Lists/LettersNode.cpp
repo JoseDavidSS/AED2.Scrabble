@@ -2,7 +2,7 @@
 // Created by kevin on 16/03/19.
 //
 
-#include "Node.h"
+#include "LettersNode.h"
 
 void Node::setLetter(string letter) {
     this->letter = letter;

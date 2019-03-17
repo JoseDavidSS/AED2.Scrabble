@@ -4,7 +4,7 @@
 
 #include <cstdio>
 #include <iostream>
-#include "List.h"
+#include "LettersList.h"
 
 using namespace std;
 
