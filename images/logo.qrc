@@ -1,0 +1,7 @@
+<!DOCTYPE RCC><RCC version="1.0">
+ <qresource>
+     <file>logo.jpg</file>
+     <file>menu_background.jpg</file>
+     <file>board.png</file>
+ </qresource>
+ </RCC>
