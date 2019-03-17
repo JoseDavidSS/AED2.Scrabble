@@ -37,6 +37,7 @@ void List::letterSorter(){
     insertNode("RR", 8, 1);
     insertNode("X", 8, 1);
     insertNode("Z", 10, 1);
+    insertNode("", 0, 2);
 }
 
 int List::getLenght(){
