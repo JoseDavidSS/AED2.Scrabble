@@ -43,33 +43,31 @@ int Client::run() {
     char buf[4096];
     string userInput;
 
+    //		Enter lines of text
+    cout << "> ";
+    getline(cin, userInput);
 
-    do {
-        //		Enter lines of text
-        cout << "> ";
-        getline(cin, userInput);
+    //		Send to server
+    int sendRes = send(sock, userInput.c_str(), userInput.size() + 1, 0);
 
-        //		Send to server
-        int sendRes = send(sock, userInput.c_str(), userInput.size() + 1, 0);
-        if (sendRes == -1)
-        {
-            cout << "Could not send to server! Whoops!\r\n";
-            continue;
-        }
+    if (sendRes == -1)
+    {
+        cout << "No se pudo enviar al server! Ahhhh!\r\n";
+    }
 
-        //		Wait for response
-        memset(buf, 0, 4096);
-        int bytesReceived = recv(sock, buf, 4096, 0);
-        if (bytesReceived == -1)
-        {
-            cout << "There was an error getting response from server\r\n";
-        }
-        else
-        {
-            //		Display response
-            cout << "SERVER> " << string(buf, bytesReceived) << "\r\n";
-        }
-    } while(true);
+    //		Wait for response
+    memset(buf, 0, 4096);
+    int bytesReceived = recv(sock, buf, 4096, 0);
+
+    if (bytesReceived == -1)
+    {
+        cout << "Hubo un error recibiendo del server\r\n";
+    }
+    else
+    {
+        //		Display response
+        cout << "SERVER> " << string(buf, bytesReceived) << "\r\n";
+    }
 
     //	Close the socket
     close(sock);
