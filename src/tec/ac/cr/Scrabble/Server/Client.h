@@ -12,7 +12,7 @@ public:
 
     Client() = default;
 
-    int run();
+    static int run();
 
 };
 
