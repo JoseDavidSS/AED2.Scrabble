@@ -25,7 +25,7 @@ public:
 
 private:
 
-    int lenght = 0;
+    int length = 0;
 
 };
 

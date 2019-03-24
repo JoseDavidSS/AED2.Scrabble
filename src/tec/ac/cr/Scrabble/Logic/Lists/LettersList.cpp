@@ -41,24 +41,24 @@ void List::letterSorter(){
 }
 
 int List::getLenght(){
-    return this->lenght;
+    return this->length;
 }
 
 void List::setLenght(int lenght) {
-    this->lenght = lenght;
+    this->length = lenght;
 }
 
 void List::insertNode(string letter, int points, int counter){
     if (this->head == nullptr){
         this->head = new Node(letter, points, counter);
-        this->lenght++;
+        this->length++;
     }else{
         Node* tmp = this->head;
         while (tmp->next != nullptr){
             tmp = tmp->next;
         }
         tmp->next = new Node(letter, points, counter);
-        this->lenght++;
+        this->length++;
     }
 }
 
@@ -67,13 +67,13 @@ void List::deleteNode(string letter){
         printf("Theres no node to delete");
     }else if(this->head->getLetter() == letter){
         this->head = this->head->next;
-        this->lenght--;
+        this->length--;
     }else{
         Node* tmp = this->head;
         while (tmp->next != nullptr){
             if (tmp->next->getLetter() == letter){
                 tmp->next = tmp->next->next;
-                this->lenght--;
+                this->length--;
                 break;
             }else{
                 tmp = tmp->next;
