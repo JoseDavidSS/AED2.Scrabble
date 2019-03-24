@@ -19,7 +19,7 @@ private:
 
     /**
      * Deletes a node from list.
-     * @param toDel
+     * @param toDel Node to delete
      */
     void del (Node *toDel) {
         if (toDel == head) {
@@ -36,8 +36,8 @@ private:
 
     /**
      * Builds list to display as a single string.
-     * @param head
-     * @param result
+     * @param head Node pointer to start the display
+     * @param result string to append values recursively
      */
     void display_aux(Node *head, string result) {
         if(head == NULL) {
@@ -46,7 +46,7 @@ private:
             cout << result << endl;
         }
         else {
-            string current = to_string(head->data);
+            string current = head->letter;
             result.append(current);
             result.append(", ");
             display_aux(head->next, result);
@@ -59,15 +59,26 @@ public:
         tail = NULL;
         length = 0;
     }
+
     /**
      * Add a new value to list.
-     * @param n
+     * @param n int to add
+     * @param multiplier int specific multiplier of square. Default is 0 (no multiplier)
+     * 0 = NO, 1 = DL, 2 = DW, 3 = TL, 4 = TW.
      */
-    void add(int n) {
+    void add(string n, int multiplier = 0) {
         Node *tmp = new Node;
-        tmp->data = n;
+        tmp->letter = n;
         tmp->next = NULL;
         tmp->prev = tail;
+
+        // Adjusts multiplier type of node.
+        if (multiplier == 0) {
+            tmp->multiplier = 0;
+        } else {
+            tmp->multiplier= multiplier;
+        }
+
         length += 1;
 
         if(head == NULL) {
@@ -84,33 +95,41 @@ public:
      * Displays list as a string.
      */
     void display() {
-        display_aux(gethead(), "[");
+        display_aux(getHead(), "[");
     }
 
-    /**
-     * Gets head node of list.
-     * @return
-     */
-    Node* gethead() {
+    Node* getHead() {
         return head;
     }
 
-    /**
-     * Get list length.
-     * @return
-     */
     int getLength() const {
         return length;
     }
 
     /**
+    * Finds the node with a specific index.
+    * @param n position of value
+    * @return *Node node in position n
+    */
+    Node* index(int n) {
+        Node *tmp = head;
+        int i = 1;
+        while (i != n) {
+            tmp = tmp->next;
+            i++;
+        }
+        cout << tmp->letter << endl;
+        return tmp;
+    }
+
+    /**
      * Remove a specific value from list.
-     * @param int n
+     * @param n int value to remove
      */
-    void remove(int n) {
+    void remove(string n) {
         Node *temp = this->head;
         while (temp != NULL) {
-            if (temp->data == n) {
+            if (temp->letter == n) {
                 del(temp);
             }
             temp = temp->next;
