@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnamespacetest.a  CMakeFiles/namespacetest.dir/namespacetest.cpp.o
+/usr/bin/ranlib libnamespacetest.a
