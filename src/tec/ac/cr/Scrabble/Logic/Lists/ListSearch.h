@@ -13,7 +13,7 @@ class ListSearch {
 public:
     ListSearch() = default;
 
-    void search(string Words );
+    int search(string Words );
 
 };
 
