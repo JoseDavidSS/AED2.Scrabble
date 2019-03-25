@@ -1,26 +1,25 @@
 //
-// Created by kevin on 16/03/19.
+// Created by kevin on 24/03/19.
 //
 
-#ifndef SCRABBLE_NODE_H
-#define SCRABBLE_NODE_H
+#ifndef SCRABBLE_LETTERNODE_H
+#define SCRABBLE_LETTERNODE_H
 
 #include <string>
 
 using namespace std;
 
-class Node {
+class LetterNode {
 
 public:
 
-    Node(string letters, int points, int counters) {
+    LetterNode(string letters, int points, int counters){
         letter = letters;
         point = points;
         counter = counters;
     }
 
-    // Attributes
-    Node* next = nullptr;
+    LetterNode* next = nullptr;
 
     // Methods
     void setLetter(string letter);
@@ -30,13 +29,13 @@ public:
     void setCounters(int counter);
     int getCounters();
 
-
 private:
 
     string letter;
     int point;
     int counter;
+
 };
 
 
-#endif //SCRABBLE_NODE_H
+#endif //SCRABBLE_LETTERNODE_H

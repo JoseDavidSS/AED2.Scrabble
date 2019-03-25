@@ -6,14 +6,33 @@
 #define SCRABBLE_HOLDER_H
 
 #include <string>
+#include "../rapidjson/prettywriter.h"
+#include "../Lists/LetterList.h"
 
 using namespace std;
+using namespace rapidjson;
 
 class Holder {
 
 public:
 
     static Holder* getInstance();
+
+    LetterList* lettersList = nullptr;
+
+    bool getTurn();
+    void setTurn(bool turn);
+    int getPoints();
+    void setPoints(int points);
+    bool getValidatedPlay();
+    void setValidatedPlay(bool validatedPlay);
+    string getPlayerName();
+    void setPlayerName(string playerName);
+    int getCodeToEnter();
+    void setCodetoEnter(int codeToEnter);
+    string serialize();
+    template<typename Writer>
+    void serializer(Writer& writer) const;
 
 private:
 
@@ -27,7 +46,6 @@ private:
     int points; //Puntos del jugador
     string playerName; //Nombre del jugador
     int codeToEnter; //Codigo para ingresar a una partida o para crear una
-    //Lista con las letras actuales del jugador
     //Matriz (lista de listas) del juego
 
 };

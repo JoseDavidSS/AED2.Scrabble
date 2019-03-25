@@ -1,14 +1,14 @@
 //
-// Created by chus on 16/03/19.
+// Created by kevin on 24/03/19.
 //
 
-#include <cstdio>
+#include <string>
 #include <iostream>
-#include "LettersList.h"
+#include "LetterList.h"
 
 using namespace std;
 
-void List::letterSorter(){
+void LetterList::letterSorter() {
     insertNode("A", 1, 12);
     insertNode("E", 1, 12);
     insertNode("0", 1, 9);
@@ -40,36 +40,36 @@ void List::letterSorter(){
     insertNode("", 0, 2);
 }
 
-int List::getLenght(){
+int LetterList::getLenght() {
     return this->length;
 }
 
-void List::setLenght(int lenght) {
+void LetterList::setLenght(int lenght) {
     this->length = lenght;
 }
 
-void List::insertNode(string letter, int points, int counter){
+void LetterList::insertNode(string letter, int points, int counter) {
     if (this->head == nullptr){
-        this->head = new Node(letter, points, counter);
+        this->head = new LetterNode(letter, points, counter);
         this->length++;
     }else{
-        Node* tmp = this->head;
+        LetterNode* tmp = this->head;
         while (tmp->next != nullptr){
             tmp = tmp->next;
         }
-        tmp->next = new Node(letter, points, counter);
+        tmp->next = new LetterNode(letter, points, counter);
         this->length++;
     }
 }
 
-void List::deleteNode(string letter){
+void LetterList::deleteNode(string letter) {
     if (this->head == nullptr){
         printf("Theres no node to delete");
     }else if(this->head->getLetter() == letter){
         this->head = this->head->next;
         this->length--;
     }else{
-        Node* tmp = this->head;
+        LetterNode* tmp = this->head;
         while (tmp->next != nullptr){
             if (tmp->next->getLetter() == letter){
                 tmp->next = tmp->next->next;
@@ -82,11 +82,11 @@ void List::deleteNode(string letter){
     }
 }
 
-void List::printList (){
+void LetterList::printList() {
     if (this->head == nullptr){
         printf("Lista nula");
     }else{
-        Node* tmp = this->head;
+        LetterNode* tmp = this->head;
         while (tmp != nullptr){
             cout << tmp->getLetter() << endl;
             tmp = tmp->next;

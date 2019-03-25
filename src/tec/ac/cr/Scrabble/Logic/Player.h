@@ -12,7 +12,9 @@ using namespace std;
 using namespace rapidjson;
 
 class Player {
+
 public:
+
     string name;
     string word;
     int firstRow;
