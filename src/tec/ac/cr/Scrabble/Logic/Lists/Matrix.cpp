@@ -3,6 +3,7 @@
 //
 
 #include "Matrix.h"
+#include <unordered_set>
 
 Matrix* Matrix::matrix = nullptr;
 
@@ -14,6 +15,7 @@ Matrix* Matrix::getInstance() {
     if (!matrix) {
         matrix = new Matrix();
         matrix->initialize();
+        matrix->assignMultipliers();
     }
     return matrix;
 }
@@ -47,11 +49,34 @@ void Matrix::addIndex(string letter, int i, int j) {
     pos->letter = letter;
 }
 
+
+/**
+* Assigns multipliers to nodes based on default Scrabble board.
+*/
 void Matrix::assignMultipliers() {
+    List* currentList = this->head;
     Node* tmp = this->head->getHead();
-    while (tmp != nullptr) {
-        if (tmp->id == 1) {
-            
+    unordered_set<int> DL = {4, 12, 37, 39, 46, 53, 60, 93, 97, 99, 103, 109, 117,
+                             123, 127, 129, 133, 166, 173, 180, 187, 189, 214, 222};
+    unordered_set<int> DW = {17, 29, 33, 43, 49, 57, 65, 71, 155, 161, 169, 177, 183, 193, 197, 209};
+    unordered_set<int> TL = {21, 25, 77, 81, 85, 89, 137, 141, 145, 149, 201, 203};
+    unordered_set<int> TW = {1, 8, 15, 106, 120, 211, 218, 225};
+    while (currentList != nullptr) {
+        while (tmp != nullptr) {
+            if (DL.count(tmp->id)) {
+                tmp->multiplier = 1;
+            } else if (DW.count(tmp->id)) {
+                tmp->multiplier = 2;
+            } else if (TL.count(tmp->id)) {
+                tmp->multiplier = 3;
+            } else if (TW.count(tmp->id)) {
+                tmp->multiplier = 4;
+            }
+            tmp = tmp->next;
+        }
+        currentList = currentList->next;
+        if (currentList != nullptr) {
+            tmp = currentList->getHead();
         }
     }
 }
