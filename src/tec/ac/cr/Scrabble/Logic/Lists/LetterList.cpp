@@ -93,3 +93,25 @@ void LetterList::printList() {
         }
     }
 }
+
+string LetterList::serialize() {
+    StringBuffer sB;
+    Writer<StringBuffer> writer(sB);
+    this->serializer(writer);
+    return sB.GetString();
+}
+
+template<typename Writer>
+void LetterList::serializer(Writer &writer) const {
+    writer.StartObject();
+    writer.String("lenght");
+    writer.Int(this->length);
+    writer.String("head");
+    if (this->head == nullptr){
+        writer.Null();
+        writer.EndObject();
+    }else{
+        writer.String(this->head->serialize().c_str());
+        writer.EndObject();
+    }
+}

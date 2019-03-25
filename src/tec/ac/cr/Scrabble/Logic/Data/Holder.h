@@ -18,7 +18,7 @@ public:
 
     static Holder* getInstance();
 
-    LetterList* lettersList = nullptr;
+    LetterList* letterList = new LetterList();
 
     bool getTurn();
     void setTurn(bool turn);

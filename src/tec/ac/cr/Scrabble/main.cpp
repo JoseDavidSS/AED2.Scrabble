@@ -3,6 +3,7 @@
 #include "Logic/Lists/Matrix.h"
 #include "Logic/Player.h"
 #include "Logic/Data/Holder.h"
+#include "Logic/ASync.h"
 
 #include <iostream>
 
@@ -10,16 +11,20 @@ using namespace std;
 
 int main(){
 
-    Holder* holder = Holder::getInstance();
+    ASync aSync;
+    aSync.aSyncFunction();
+
+   /* Holder* holder = Holder::getInstance();
     holder->setTurn(false);
     holder->setPoints(1000);
     holder->setValidatedPlay(true);
     holder->setPlayerName("dasd");
     holder->setCodetoEnter(12345);
+    holder->letterList->letterSorter();
     string j = holder->serialize();
     cout << j << endl;
 
- /*   Player* p1 = new Player("Jose");
+    Player* p1 = new Player("Jose");
     p1->setMessage("LEON",1,1,1,4);
     p1->toString();
     string json = p1->serialize();

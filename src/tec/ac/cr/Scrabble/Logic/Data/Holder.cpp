@@ -74,8 +74,6 @@ void Holder::serializer(Writer &writer) const {
     writer.String("codeToEnter");
     writer.Int(this->codeToEnter);
     writer.String("letterList");
-    writer.String("lenght");
-    writer.String("head");
-    writer.String("letter");
+    writer.String(this->letterList->serialize().c_str());
     writer.EndObject();
 }

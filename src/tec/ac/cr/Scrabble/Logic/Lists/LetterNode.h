@@ -6,8 +6,10 @@
 #define SCRABBLE_LETTERNODE_H
 
 #include <string>
+#include "../rapidjson/prettywriter.h"
 
 using namespace std;
+using namespace rapidjson;
 
 class LetterNode {
 
@@ -28,6 +30,9 @@ public:
     int getPoints();
     void setCounters(int counter);
     int getCounters();
+    string serialize();
+    template<typename Writer>
+    void serializer(Writer& writer) const;
 
 private:
 

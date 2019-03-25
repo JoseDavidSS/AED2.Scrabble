@@ -6,8 +6,10 @@
 #define SCRABBLE_LETTERLIST_H
 
 #include "LetterNode.h"
+#include "../rapidjson/prettywriter.h"
 
 using namespace std;
+using namespace rapidjson;
 
 class LetterList {
 
@@ -23,6 +25,9 @@ public:
     void deleteNode (string letter);
     void printList ();
     void letterSorter();
+    string serialize();
+    template<typename Writer>
+    void serializer(Writer& writer) const;
 
 private:
 
