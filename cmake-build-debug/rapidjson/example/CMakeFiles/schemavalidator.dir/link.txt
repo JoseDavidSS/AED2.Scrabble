@@ -1,0 +1,1 @@
+/usr/bin/c++  -pthread -march=native -Wall -Wextra -Werror -pthread -g  -rdynamic CMakeFiles/schemavalidator.dir/schemavalidator/schemavalidator.cpp.o  -o ../../bin/schemavalidator 

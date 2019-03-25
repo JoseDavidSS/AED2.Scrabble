@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="gtest"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\rapidjson\;CMake Files\rapidjson\doc\;CMake Files\rapidjson\example\;CMake Files\rapidjson\test\;CMake Files\rapidjson\test\perftest\;CMake Files\rapidjson\test\unittest\;CMake Files\rapidjson\CMakeModules\;CMake Files\rapidjson\thirdparty\;CMake Files\rapidjson\thirdparty\gtest\;CMake Files\rapidjson\thirdparty\gtest\googletest\;CMake Files\rapidjson\thirdparty\gtest\googletest\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/chus/CLionProjects/Scrabble/rapidjson/include"/>
+					<Add directory="/home/chus/CLionProjects/Scrabble/rapidjson/thirdparty/gtest/googletest"/>
+					<Add directory="/home/chus/CLionProjects/Scrabble/rapidjson/thirdparty/gtest/googletest/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/chus/CLionProjects/Scrabble/rapidjson/include"/>
+					<Add directory="/home/chus/CLionProjects/Scrabble/rapidjson/thirdparty/gtest/googletest"/>
+					<Add directory="/home/chus/CLionProjects/Scrabble/rapidjson/thirdparty/gtest/googletest/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/chus/CLionProjects/Scrabble/rapidjson/include"/>
+					<Add directory="/home/chus/CLionProjects/Scrabble/rapidjson/thirdparty/gtest/googletest/include"/>
+					<Add directory="/home/chus/CLionProjects/Scrabble/rapidjson/thirdparty/gtest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/chus/CLionProjects/Scrabble/rapidjson/include"/>
+					<Add directory="/home/chus/CLionProjects/Scrabble/rapidjson/thirdparty/gtest/googletest/include"/>
+					<Add directory="/home/chus/CLionProjects/Scrabble/rapidjson/thirdparty/gtest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/chus/CLionProjects/Scrabble/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/rapidjson/thirdparty/gtest/googletest/src/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/rapidjson/thirdparty/gtest/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/rapidjson/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\rapidjson\"/>
+		</Unit>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/rapidjson/RapidJSON.pc.in">
+			<Option virtualFolder="CMake Files\rapidjson\"/>
+		</Unit>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/rapidjson/RapidJSONConfig.cmake.in">
+			<Option virtualFolder="CMake Files\rapidjson\"/>
+		</Unit>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/rapidjson/RapidJSONConfigVersion.cmake.in">
+			<Option virtualFolder="CMake Files\rapidjson\"/>
+		</Unit>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/rapidjson/doc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\rapidjson\doc\"/>
+		</Unit>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/rapidjson/example/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\rapidjson\example\"/>
+		</Unit>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/rapidjson/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\rapidjson\test\"/>
+		</Unit>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/rapidjson/test/perftest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\rapidjson\test\perftest\"/>
+		</Unit>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/rapidjson/test/unittest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\rapidjson\test\unittest\"/>
+		</Unit>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/rapidjson/CMakeModules/FindGTestSrc.cmake">
+			<Option virtualFolder="CMake Files\rapidjson\CMakeModules\"/>
+		</Unit>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/rapidjson/thirdparty/gtest/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\rapidjson\thirdparty\gtest\googletest\"/>
+		</Unit>
+		<Unit filename="/home/chus/CLionProjects/Scrabble/rapidjson/thirdparty/gtest/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\rapidjson\thirdparty\gtest\googletest\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

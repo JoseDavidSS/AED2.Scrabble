@@ -203,7 +203,7 @@ struct UTF8 {
 
     static unsigned char GetRange(unsigned char c) {
         // Referring to DFA of http://bjoern.hoehrmann.de/utf-8/decoder/dfa/
-        // With new mapping 1 -> 0x10, 7 -> 0x20, 9 -> 0x40, such that AND operation can test multiple types.
+        // With new mapping 1 -> 0x10, 7 -> 0x20, 9 -> 0x40, such that AND operation can test.txt multiple types.
         static const unsigned char type[] = {
             0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
             0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
