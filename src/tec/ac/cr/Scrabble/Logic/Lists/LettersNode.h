@@ -19,10 +19,10 @@ public:
         counter = counters;
     }
 
-    //Atributos con los que contará la clase.
+    // Attributes
     Node* next = nullptr;
 
-    //Métodos con los que contará la clase.
+    // Methods
     void setLetter(string letter);
     string getLetter();
     void setPoints(int point);
