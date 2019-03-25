@@ -1,20 +1,21 @@
 //
-// Created by chus on 16/03/19.
+// Created by kevin on 24/03/19.
 //
 
-#ifndef SCRABBLE_LIST_H
-#define SCRABBLE_LIST_H
+#ifndef SCRABBLE_LETTERLIST_H
+#define SCRABBLE_LETTERLIST_H
 
+#include "LetterNode.h"
 
-#include "LettersNode.h"
+using namespace std;
 
-class List {
+class LetterList {
 
 public:
 
-    List() = default;
+    LetterList() = default;
 
-    Node* head = nullptr;
+    LetterNode* head = nullptr;
 
     int getLenght();
     void setLenght(int lenght);
@@ -30,4 +31,4 @@ private:
 };
 
 
-#endif //SCRABBLE_LIST_H
+#endif //SCRABBLE_LETTERLIST_H
