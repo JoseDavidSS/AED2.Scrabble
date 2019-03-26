@@ -14,25 +14,26 @@ using namespace std;
 class List {
 
 public:
+
     List() {
+
         head = nullptr;
-        tail = nullptr;
         length = 0;
     }
 
+    Node *head;
     List* next = nullptr;
-    int length;
 
+    int getLenght();
+    void setLenght(int lenght);
     void add(string n, int id, int multiplier = 0);
-
     void display();
-
     Node* getHead();
-
     Node* index(int n);
 
 private:
-    Node *head,*tail;
+
+    int length;
 
 };
 
