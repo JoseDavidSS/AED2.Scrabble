@@ -1,1 +1,0 @@
-/usr/bin/c++  -pthread -march=native -Wall -Wextra -Werror -pthread -g  -rdynamic CMakeFiles/condense.dir/condense/condense.cpp.o  -o ../../bin/condense 
