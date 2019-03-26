@@ -22,7 +22,7 @@ using namespace std;
 int ListSearch::search(string Words) {
     {
         ifstream fin;
-        fin.open("/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/words_fixed_again.text");
+        fin.open("/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/words.text");
         if (fin.fail()) {
             cout << "No hay ni pinga.\n";
             exit(1);

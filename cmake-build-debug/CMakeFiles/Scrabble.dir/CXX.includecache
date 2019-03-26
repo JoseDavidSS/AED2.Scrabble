@@ -6,139 +6,143 @@
 
 #IncludeRegexTransform: 
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Data/Holder.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Data/Holder.h
 string
 -
 ../rapidjson/prettywriter.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/prettywriter.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/prettywriter.h
 ../Lists/LetterList.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.h
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.h
 iostream
 -
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.h
 LetterNode.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.h
+../rapidjson/prettywriter.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/prettywriter.h
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.h
 string
 -
+../rapidjson/prettywriter.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/prettywriter.h
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/List.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/List.h
 Node.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Node.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Node.h
 iostream
 -
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.h
 iostream
 -
 Node.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Node.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Node.h
 List.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/List.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/List.h
 sstream
 -
 string
 -
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Node.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Node.h
 iostream
 -
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp
 ../../Server/Client.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/Client.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/Client.h
 List.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/List.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/List.h
 Matrix.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.h
 ../Player.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Player.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Player.h
 ../Data/Holder.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Data/Holder.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Data/Holder.h
 Btree.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.h
 iostream
 -
 stdio.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/stdio.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/stdio.h
 iostream
 -
 fstream
 -
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Player.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Player.h
 rapidjson/prettywriter.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/prettywriter.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/prettywriter.h
 iostream
 -
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/allocators.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/allocators.h
 rapidjson.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/encodings.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/encodings.h
 rapidjson.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/diyfp.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/diyfp.h
 ../rapidjson.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
 limits
 -
 intrin.h
 -
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/dtoa.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/dtoa.h
 itoa.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/itoa.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/itoa.h
 diyfp.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/diyfp.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/diyfp.h
 ieee754.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/ieee754.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/ieee754.h
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/ieee754.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/ieee754.h
 ../rapidjson.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/itoa.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/itoa.h
 ../rapidjson.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/meta.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/meta.h
 ../rapidjson.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
 type_traits
 -
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/stack.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/stack.h
 ../allocators.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/allocators.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/allocators.h
 swap.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/swap.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/swap.h
 cstddef
 -
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/strfunc.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/strfunc.h
 ../stream.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/stream.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/stream.h
 cwchar
 -
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/swap.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/swap.h
 ../rapidjson.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/msinttypes/inttypes.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/msinttypes/inttypes.h
 stdint.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/msinttypes/stdint.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/msinttypes/stdint.h
 inttypes.h
 -
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/msinttypes/stdint.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/msinttypes/stdint.h
 stdint.h
 -
 limits.h
@@ -146,23 +150,23 @@ limits.h
 wchar.h
 -
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/prettywriter.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/prettywriter.h
 writer.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/writer.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/writer.h
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
 cstdlib
 -
 cstring
 -
 rapidjson/...
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson/...
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson/...
 string
 -
 msinttypes/stdint.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/msinttypes/stdint.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/msinttypes/stdint.h
 msinttypes/inttypes.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/msinttypes/inttypes.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/msinttypes/inttypes.h
 stdint.h
 -
 inttypes.h
@@ -170,41 +174,41 @@ inttypes.h
 endian.h
 -
 rapidjson/...
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson/...
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson/...
 cassert
 -
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/stream.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/stream.h
 rapidjson.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/rapidjson.h
 encodings.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/encodings.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/encodings.h
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/stringbuffer.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/stringbuffer.h
 stream.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/stream.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/stream.h
 internal/stack.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/stack.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/stack.h
 utility
 -
 internal/stack.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/stack.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/stack.h
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/writer.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/writer.h
 stream.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/stream.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/stream.h
 internal/meta.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/meta.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/meta.h
 internal/stack.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/stack.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/stack.h
 internal/strfunc.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/strfunc.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/strfunc.h
 internal/dtoa.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/dtoa.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/dtoa.h
 internal/itoa.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/itoa.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/internal/itoa.h
 stringbuffer.h
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/stringbuffer.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/rapidjson/stringbuffer.h
 new
 -
 intrin.h
@@ -216,5 +220,5 @@ emmintrin.h
 arm_neon.h
 -
 
-/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/Client.h
+/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/Client.h
 

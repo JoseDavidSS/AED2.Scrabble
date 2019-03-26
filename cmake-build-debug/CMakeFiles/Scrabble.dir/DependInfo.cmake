@@ -4,17 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/ASync.cpp" "/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.o"
-  "/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp" "/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.o"
-  "/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp" "/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.o"
-  "/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp" "/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.o"
-  "/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp" "/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.o"
-  "/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp" "/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.o"
-  "/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp" "/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.o"
-  "/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp" "/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.o"
-  "/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp" "/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.o"
-  "/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Player.cpp" "/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.o"
-  "/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/Client.cpp" "/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.o"
+  "/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/ASync.cpp" "/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.o"
+  "/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp" "/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.o"
+  "/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp" "/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.o"
+  "/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp" "/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.o"
+  "/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp" "/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.o"
+  "/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp" "/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.o"
+  "/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp" "/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.o"
+  "/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp" "/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.o"
+  "/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp" "/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.o"
+  "/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Player.cpp" "/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.o"
+  "/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/Client.cpp" "/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

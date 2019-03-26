@@ -15,7 +15,7 @@ using namespace std;
 int main(){
     {
         ifstream fin;
-        fin.open("/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/words_fixed_again.text");
+        fin.open("/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/words.text");
         if(fin.fail())
         {
             cout << "No hay ni pinga.\n";
@@ -90,7 +90,6 @@ int main(){
     Player* p2 = p1->deserealize(json.c_str());
     p2->toString();
 
-    // Create test.txt lists
     List l;
     l.add("A");
     l.add("B");

@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/chus/Documentos/CLion-2018.3.4/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/kevin/Documentos/Programas/CLion-2018.3.4/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/chus/Documentos/CLion-2018.3.4/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/kevin/Documentos/Programas/CLion-2018.3.4/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chus/CLionProjects/Scrabble
+CMAKE_SOURCE_DIR = /home/kevin/CLionProjects/Scrabble
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chus/CLionProjects/Scrabble/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kevin/CLionProjects/Scrabble/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Scrabble.dir/depend.make
@@ -59,146 +59,146 @@ include CMakeFiles/Scrabble.dir/flags.make
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.o: CMakeFiles/Scrabble.dir/flags.make
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.o: ../src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.o -c /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.o -c /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.i
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/main.cpp.s
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.o: CMakeFiles/Scrabble.dir/flags.make
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.o: ../src/tec/ac/cr/Scrabble/Server/Client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.o -c /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/Client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.o -c /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/Client.cpp
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/Client.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/Client.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.i
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/Client.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/Client.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Server/Client.cpp.s
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.o: CMakeFiles/Scrabble.dir/flags.make
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.o: ../src/tec/ac/cr/Scrabble/Logic/ASync.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.o -c /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/ASync.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.o -c /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/ASync.cpp
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/ASync.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/ASync.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.i
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/ASync.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/ASync.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/ASync.cpp.s
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.o: CMakeFiles/Scrabble.dir/flags.make
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.o: ../src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.o -c /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.o -c /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.i
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Data/Holder.cpp.s
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.o: CMakeFiles/Scrabble.dir/flags.make
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.o: ../src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.o -c /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.o -c /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.i
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Node.cpp.s
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.o: CMakeFiles/Scrabble.dir/flags.make
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.o: ../src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.o -c /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.o -c /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.i
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/List.cpp.s
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.o: CMakeFiles/Scrabble.dir/flags.make
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.o: ../src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.o -c /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.o -c /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.i
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Matrix.cpp.s
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.o: CMakeFiles/Scrabble.dir/flags.make
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.o: ../src/tec/ac/cr/Scrabble/Logic/Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.o -c /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.o -c /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Player.cpp
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Player.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Player.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.i
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Player.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Player.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Player.cpp.s
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.o: CMakeFiles/Scrabble.dir/flags.make
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.o: ../src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.o -c /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.o -c /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.i
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterList.cpp.s
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.o: CMakeFiles/Scrabble.dir/flags.make
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.o: ../src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.o -c /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.o -c /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.i
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.cpp.s
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.o: CMakeFiles/Scrabble.dir/flags.make
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.o: ../src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.o -c /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.o -c /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp > CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.i
 
 CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp -o CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.s
 
 # Object files for target Scrabble
 Scrabble_OBJECTS = \
@@ -230,7 +230,7 @@ Scrabble: CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/LetterNode.
 Scrabble: CMakeFiles/Scrabble.dir/src/tec/ac/cr/Scrabble/Logic/Lists/Btree.cpp.o
 Scrabble: CMakeFiles/Scrabble.dir/build.make
 Scrabble: CMakeFiles/Scrabble.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable Scrabble"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable Scrabble"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Scrabble.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -243,6 +243,6 @@ CMakeFiles/Scrabble.dir/clean:
 .PHONY : CMakeFiles/Scrabble.dir/clean
 
 CMakeFiles/Scrabble.dir/depend:
-	cd /home/chus/CLionProjects/Scrabble/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chus/CLionProjects/Scrabble /home/chus/CLionProjects/Scrabble /home/chus/CLionProjects/Scrabble/cmake-build-debug /home/chus/CLionProjects/Scrabble/cmake-build-debug /home/chus/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kevin/CLionProjects/Scrabble/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kevin/CLionProjects/Scrabble /home/kevin/CLionProjects/Scrabble /home/kevin/CLionProjects/Scrabble/cmake-build-debug /home/kevin/CLionProjects/Scrabble/cmake-build-debug /home/kevin/CLionProjects/Scrabble/cmake-build-debug/CMakeFiles/Scrabble.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Scrabble.dir/depend
 
