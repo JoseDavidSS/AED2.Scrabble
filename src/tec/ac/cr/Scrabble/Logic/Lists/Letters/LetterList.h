@@ -6,7 +6,7 @@
 #define SCRABBLE_LETTERLIST_H
 
 #include "LetterNode.h"
-#include "../rapidjson/prettywriter.h"
+#include "../../rapidjson/prettywriter.h"
 
 using namespace std;
 using namespace rapidjson;

@@ -1,6 +1,6 @@
 #include "Server/Client.h"
-#include "Logic/Lists/List.h"
-#include "Logic/Lists/Matrix.h"
+#include "Logic/Lists/Matrix/List.h"
+#include "Logic/Lists/Matrix/Matrix.h"
 #include "Logic/Player.h"
 #include "Logic/Data/Holder.h"
 #include "UI/menu.h"

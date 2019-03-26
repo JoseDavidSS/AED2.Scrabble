@@ -7,7 +7,8 @@
 
 #include <string>
 #include "../rapidjson/prettywriter.h"
-#include "../Lists/LetterList.h"
+#include "../Lists/Letters/LetterList.h"
+#include "../Lists/Dictionary/WordList.h"
 
 using namespace std;
 using namespace rapidjson;

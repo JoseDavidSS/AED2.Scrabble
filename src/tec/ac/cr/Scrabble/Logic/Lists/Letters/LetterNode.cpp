@@ -52,5 +52,4 @@ void LetterNode::serializer(Writer &writer) const {
         writer.String(this->next->serialize().c_str());
         writer.EndObject();
     }
-
 }
