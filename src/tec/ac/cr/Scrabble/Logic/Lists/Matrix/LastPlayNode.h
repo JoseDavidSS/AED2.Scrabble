@@ -21,6 +21,8 @@ public:
         column = j;
     }
 
+    LastPlayNode() = default;
+
     LastPlayNode* next = nullptr;
 
     string getLetter();
@@ -32,6 +34,7 @@ public:
     string serialize();
     template<typename Writer>
     void serializer(Writer& writer) const;
+    LastPlayNode* deserialize(const char* json);
 
 private:
 

@@ -5,6 +5,7 @@
 #include <string>
 #include <iostream>
 #include "LetterList.h"
+#include "../../rapidjson/document.h"
 
 using namespace std;
 
@@ -113,5 +114,19 @@ void LetterList::serializer(Writer &writer) const {
     }else{
         writer.String(this->head->serialize().c_str());
         writer.EndObject();
+    }
+}
+
+LetterList* LetterList::deserialize(const char *json) {
+    LetterList* parsedList = new LetterList();
+    Document doc;
+    doc.Parse(json);
+    parsedList->setLenght(doc["lenght"].GetInt());
+    if (doc["head"].IsNull()){
+        parsedList->head = nullptr;
+        return parsedList;
+    }else{
+        parsedList->head = this->head->deserialize(doc["head"].GetString());
+        return parsedList;
     }
 }

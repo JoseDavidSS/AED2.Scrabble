@@ -3,6 +3,7 @@
 //
 
 #include "LetterNode.h"
+#include "../../rapidjson/document.h"
 
 void LetterNode::setLetter(string letter) {
     this->letter = letter;
@@ -51,5 +52,21 @@ void LetterNode::serializer(Writer &writer) const {
     }else{
         writer.String(this->next->serialize().c_str());
         writer.EndObject();
+    }
+}
+
+LetterNode* LetterNode::deserialize(const char *json) {
+    LetterNode* parsedNode = new LetterNode();
+    Document doc;
+    doc.Parse(json);
+    parsedNode->setLetter(doc["letter"].GetString());
+    parsedNode->setPoints(doc["point"].GetInt());
+    parsedNode->setCounters(doc["counter"].GetInt());
+    if (doc["next"].IsNull()){
+        parsedNode->next = nullptr;
+        return parsedNode;
+    }else{
+        parsedNode->next = this->next->deserialize(doc["next"].GetString());
+        return parsedNode;
     }
 }

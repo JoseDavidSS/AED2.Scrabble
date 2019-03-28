@@ -28,6 +28,7 @@ public:
     string serialize();
     template<typename Writer>
     void serializer(Writer& writer) const;
+    LetterList* deserialize(const char* json);
 
 private:
 

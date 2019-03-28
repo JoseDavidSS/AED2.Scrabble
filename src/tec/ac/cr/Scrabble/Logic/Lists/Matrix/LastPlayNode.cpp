@@ -3,6 +3,7 @@
 //
 
 #include "LastPlayNode.h"
+#include "../../rapidjson/document.h"
 
 string LastPlayNode::getLetter() {
     return this->letter;
@@ -51,5 +52,21 @@ void LastPlayNode::serializer(Writer &writer) const {
     }else{
         writer.String(this->next->serialize().c_str());
         writer.EndObject();
+    }
+}
+
+LastPlayNode* LastPlayNode::deserialize(const char *json) {
+    LastPlayNode* parsedNode = new LastPlayNode();
+    Document doc;
+    doc.Parse(json);
+    parsedNode->setLetter(doc["letter"].GetString());
+    parsedNode->setRow(doc["row"].GetInt());
+    parsedNode->setColumn(doc["column"].GetInt());
+    if (doc["next"].IsNull()){
+        parsedNode->next = nullptr;
+        return parsedNode;
+    }else{
+        parsedNode->next = this->next->deserialize(doc["next"].GetString());
+        return parsedNode;
     }
 }

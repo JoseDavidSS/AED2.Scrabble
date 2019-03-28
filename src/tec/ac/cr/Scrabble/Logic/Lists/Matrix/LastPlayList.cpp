@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "LastPlayList.h"
+#include "../../rapidjson/document.h"
 
 int LastPlayList::getLenght() {
     return this->lenght;
@@ -64,5 +65,19 @@ void LastPlayList::serializer(Writer &writer) const {
     }else{
         writer.String(this->head->serialize().c_str());
         writer.EndObject();
+    }
+}
+
+LastPlayList* LastPlayList::deserialize(const char *json) {
+    LastPlayList* parsedList = new LastPlayList();
+    Document doc;
+    doc.Parse(json);
+    parsedList->setLenght(doc["lenght"].GetInt());
+    if (doc["head"].IsNull()){
+        parsedList->head = nullptr;
+        return parsedList;
+    }else{
+        parsedList->head = this->head->deserialize(doc["head"].GetString());
+        return parsedList;
     }
 }

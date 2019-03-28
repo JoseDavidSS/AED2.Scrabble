@@ -6,10 +6,8 @@
 #define SCRABBLE_NODE_H
 
 #include <iostream>
-#include "../../rapidjson/prettywriter.h"
 
 using namespace std;
-using namespace rapidjson;
 
 class Node {
 
@@ -25,9 +23,6 @@ public:
     void setMultiplier(int multiplier);
     int getID();
     void setID(int id);
-    string serialize();
-    template<typename Writer>
-    void serializer(Writer& writer) const;
 
 private:
 

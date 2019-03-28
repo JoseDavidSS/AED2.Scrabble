@@ -27,29 +27,3 @@ int Node::getID() {
 void Node::setID(int id) {
     this->id = id;
 }
-
-string Node::serialize() {
-    StringBuffer sB;
-    Writer<StringBuffer> writer(sB);
-    this->serializer(writer);
-    return sB.GetString();
-}
-
-template<typename Writer>
-void Node::serializer(Writer &writer) const {
-    writer.StartObject();
-    writer.String("letter");
-    writer.String(this->letter.c_str());
-    writer.String("multiplier");
-    writer.Int(this->multiplier);
-    writer.String("id");
-    writer.Int(this->id);
-    writer.String("next");
-    if (this->next == nullptr){
-        writer.Null();
-        writer.EndObject();
-    }else{
-        writer.String(this->next->serialize().c_str());
-        writer.EndObject();
-    }
-}

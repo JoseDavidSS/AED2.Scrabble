@@ -9,6 +9,7 @@
 #include "../rapidjson/prettywriter.h"
 #include "../Lists/Letters/LetterList.h"
 #include "../Lists/Dictionary/WordList.h"
+#include "../Lists/Matrix/LastPlayList.h"
 
 using namespace std;
 using namespace rapidjson;
@@ -20,6 +21,7 @@ public:
     static Holder* getInstance();
 
     LetterList* letterList = new LetterList();
+    LastPlayList* lastPlayList = new LastPlayList();
 
     bool getTurn();
     void setTurn(bool turn);
@@ -34,6 +36,7 @@ public:
     string serialize();
     template<typename Writer>
     void serializer(Writer& writer) const;
+    Holder* deserialize(const char* json);
 
 private:
 
@@ -47,7 +50,6 @@ private:
     int points; //Puntos del jugador
     string playerName; //Nombre del jugador
     int codeToEnter; //Codigo para ingresar a una partida o para crear una
-    //Matriz (lista de listas) del juego
 
 };
 

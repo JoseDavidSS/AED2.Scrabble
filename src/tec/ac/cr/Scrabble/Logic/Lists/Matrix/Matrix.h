@@ -20,28 +20,29 @@ public:
         length = 0;
     }
 
-    List* head;
+    List* head = nullptr;
 
+    int getLenght();
+    void setLenght(int lenght);
+    int getRows();
+    void setRows(int rows);
+    int getColumns();
+    void setColumns(int columns);
     void addRow(List* list);
-
     void addIndex(string letter, int i, int j);
-
     void display();
-
     static Matrix* getInstance();
-
     Node* index(int i, int j);
-
     void initialize();
 
 private:
-    int length, rows, columns;
 
     Matrix() = default;
     Matrix(Matrix const&)= default;
     Matrix& operator = (Matrix const&) = default;
 
     static Matrix* matrix;
+    int length, rows, columns;
 
     void assignMultipliers();
 

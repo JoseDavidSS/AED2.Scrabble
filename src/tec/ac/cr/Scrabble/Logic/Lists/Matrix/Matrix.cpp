@@ -20,6 +20,30 @@ Matrix* Matrix::getInstance() {
     return matrix;
 }
 
+int Matrix::getLenght() {
+    return this->length;
+}
+
+void Matrix::setLenght(int lenght) {
+    this->length = lenght;
+}
+
+int Matrix::getRows() {
+    return this->rows;
+}
+
+void Matrix::setRows(int rows) {
+    this->rows = rows;
+}
+
+int Matrix::getColumns() {
+    return this->columns;
+}
+
+void Matrix::setColumns(int columns) {
+    this->columns = columns;
+}
+
 /**
 * Add a new value to list.
 * @param n int to add
@@ -28,14 +52,15 @@ Matrix* Matrix::getInstance() {
 void Matrix::addRow(List* list) {
     if (this->head == nullptr) {
         this->head = list;
-    } else {
+        this->length++;
+    }else {
         List* tmp = this->head;
         while (tmp->next != nullptr){
             tmp = tmp->next;
         }
         tmp->next = list;
+        this->length++;
     }
-    this->length++;
 }
 
 /**
@@ -46,7 +71,7 @@ void Matrix::addRow(List* list) {
 */
 void Matrix::addIndex(string letter, int i, int j) {
     Node* pos = index(i, j);
-    pos->letter = letter;
+    pos->setLetter(letter);
 }
 
 
@@ -63,14 +88,14 @@ void Matrix::assignMultipliers() {
     unordered_set<int> TW = {1, 8, 15, 106, 120, 211, 218, 225};
     while (currentList != nullptr) {
         while (tmp != nullptr) {
-            if (DL.count(tmp->id)) {
-                tmp->multiplier = 1;
-            } else if (DW.count(tmp->id)) {
-                tmp->multiplier = 2;
-            } else if (TL.count(tmp->id)) {
-                tmp->multiplier = 3;
-            } else if (TW.count(tmp->id)) {
-                tmp->multiplier = 4;
+            if (DL.count(tmp->getID())) {
+                tmp->setMultiplier(1);
+            } else if (DW.count(tmp->getID())) {
+                tmp->setMultiplier(2);
+            } else if (TL.count(tmp->getID())) {
+                tmp->setMultiplier(3);
+            } else if (TW.count(tmp->getID())) {
+                tmp->setMultiplier(4);
             }
             tmp = tmp->next;
         }

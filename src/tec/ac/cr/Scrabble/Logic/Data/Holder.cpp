@@ -3,6 +3,7 @@
 //
 
 #include "Holder.h"
+#include "../rapidjson/document.h"
 
 Holder* Holder::holder = nullptr;
 
@@ -64,7 +65,7 @@ template<typename Writer>
 void Holder::serializer(Writer &writer) const {
     writer.StartObject();
     writer.String("turn");
-    writer.Int(this->turn);
+    writer.Bool(this->turn);
     writer.String("validatedPlay");
     writer.Bool(this->validatedPlay);
     writer.String("points");
@@ -75,7 +76,21 @@ void Holder::serializer(Writer &writer) const {
     writer.Int(this->codeToEnter);
     writer.String("letterList");
     writer.String(this->letterList->serialize().c_str());
-    writer.String("wordList");
-    writer.String(this->wordList->serialize().c_str());
+    writer.String("lastPlayList");
+    writer.String(this->lastPlayList->serialize().c_str());
     writer.EndObject();
+}
+
+Holder* Holder::deserialize(const char *json) {
+    Holder* parsedHolder = new Holder();
+    Document doc;
+    doc.Parse(json);
+    parsedHolder->setTurn(doc["turn"].GetBool());
+    parsedHolder->setValidatedPlay(doc["validatedPlay"].GetBool());
+    parsedHolder->setPoints(doc["points"].GetInt());
+    parsedHolder->setPlayerName(doc["playerName"].GetString());
+    parsedHolder->setCodetoEnter(doc["codeToEnter"].GetInt());
+    parsedHolder->letterList = this->letterList->deserialize(doc["letterList"].GetString());
+    parsedHolder->lastPlayList = this->lastPlayList->deserialize(doc["lastPlayList"].GetString());
+    return parsedHolder;
 }

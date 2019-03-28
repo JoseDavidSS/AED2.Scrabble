@@ -21,6 +21,8 @@ public:
         counter = counters;
     }
 
+    LetterNode() = default;
+
     LetterNode* next = nullptr;
 
     // Methods
@@ -33,6 +35,7 @@ public:
     string serialize();
     template<typename Writer>
     void serializer(Writer& writer) const;
+    LetterNode* deserialize(const char* json);
 
 private:
 

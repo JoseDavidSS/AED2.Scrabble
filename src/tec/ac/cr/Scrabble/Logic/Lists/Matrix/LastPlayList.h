@@ -27,6 +27,7 @@ public:
     string serialize();
     template<typename Writer>
     void serializer(Writer& writer) const;
+    LastPlayList* deserialize(const char* json);
 
 private:
 
