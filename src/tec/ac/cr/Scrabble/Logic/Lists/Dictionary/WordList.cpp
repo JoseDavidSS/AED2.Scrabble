@@ -10,6 +10,14 @@
 #include<iostream>
 #include<cstdlib>
 
+WordList* WordList::wordList = nullptr;
+
+WordList* WordList::getInstance() {
+    if (!wordList){
+        wordList = new WordList;
+    }
+    return wordList;
+}
 
 int WordList::getLenght() {
     return this->lenght;

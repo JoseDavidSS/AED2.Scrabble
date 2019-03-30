@@ -6,6 +6,15 @@
 #include "LastPlayList.h"
 #include "../../rapidjson/document.h"
 
+LastPlayList* LastPlayList::lastPlayList = nullptr;
+
+LastPlayList* LastPlayList::getInstance() {
+    if (!lastPlayList){
+        lastPlayList = new LastPlayList;
+    }
+    return lastPlayList;
+}
+
 int LastPlayList::getLenght() {
     return this->lenght;
 }

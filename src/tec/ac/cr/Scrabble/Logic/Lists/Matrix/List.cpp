@@ -18,9 +18,9 @@ void List::setLenght(int lenght) {
 * @param multiplier int specific multiplier of square. Default is 0 (no multiplier)
 * 0 = NO, 1 = DL, 2 = DW, 3 = TL, 4 = TW.
 */
-void List::add(string n, int id, int multiplier) {
+void List::add(int id, int multiplier) {
     Node* tmp = new Node;
-    tmp->setLetter(n);
+    tmp->setLetter("");
     tmp->next = nullptr;
 
     // Adjusts multiplier type of node.
@@ -63,6 +63,7 @@ void List::display() {
     result.append("]");
     cout << result << endl;
 }
+
  Node*List::getHead() {
     return this->head;
 }
@@ -74,7 +75,7 @@ void List::display() {
 */
 Node* List::index(int n) {
     Node *tmp = head;
-    int i = 1;
+    int i = 0;
     while (i != n) {
         tmp = tmp->next;
         i++;

@@ -3,6 +3,8 @@
 //
 
 #include "Matrix.h"
+#include "LastPlayList.h"
+#include "../Dictionary/WordList.h"
 #include <unordered_set>
 
 Matrix* Matrix::matrix = nullptr;
@@ -13,7 +15,7 @@ Matrix* Matrix::matrix = nullptr;
 */
 Matrix* Matrix::getInstance() {
     if (!matrix) {
-        matrix = new Matrix();
+        matrix = new Matrix;
         matrix->initialize();
         matrix->assignMultipliers();
     }
@@ -44,6 +46,38 @@ void Matrix::setColumns(int columns) {
     this->columns = columns;
 }
 
+int Matrix::getLastPlayRow() {
+    return this->lastPlayRow;
+}
+
+void Matrix::setLastPlayRow(int row) {
+    this->lastPlayRow = row;
+}
+
+int Matrix::getLastPlayColumn() {
+    return this->lastPlayColumn;
+}
+
+void Matrix::setLastPlayColumn(int column) {
+    this->lastPlayColumn = column;
+}
+
+int Matrix::getPreLastPlayRow() {
+    return this->preLastPlayRow;
+}
+
+void Matrix::setPreLastPlayRow(int row) {
+    this->preLastPlayRow = row;
+}
+
+int Matrix::getPreLastPlayColumn() {
+    return this->preLastPlayColumn;
+}
+
+void Matrix::setPreLastPlayColumn(int column) {
+    this->preLastPlayColumn = column;
+}
+
 /**
 * Add a new value to list.
 * @param n int to add
@@ -72,6 +106,19 @@ void Matrix::addRow(List* list) {
 void Matrix::addIndex(string letter, int i, int j) {
     Node* pos = index(i, j);
     pos->setLetter(letter);
+    LastPlayList* lastPlayList = LastPlayList::getInstance();
+    lastPlayList->addPlay(letter, i, j);
+    this->preLastPlayRow = this->lastPlayRow;
+    this->preLastPlayColumn = this->lastPlayColumn;
+    this->lastPlayRow = i;
+    this->lastPlayColumn = j;
+}
+
+void Matrix::deleteIndex(string letter, int i, int j) {
+    Node* pos = index(i, j);
+    pos->setLetter("");
+    LastPlayList* lastPlayList = LastPlayList::getInstance();
+    lastPlayList->deletePlay(letter, i, j);
 }
 
 
@@ -125,7 +172,7 @@ void Matrix::display() {
 */
 Node* Matrix::index(int i, int j) {
     List* tmp = head;
-    int counter = 1;
+    int counter = 0;
     while (counter != i) {
         tmp = tmp->next;
         counter++;
@@ -147,7 +194,7 @@ void Matrix::initialize() {
         if (this->head == nullptr) {
             this->head = new List();
             while (columns != 0){
-                this->head->add(to_string(n), n);
+                this->head->add(n);
                 n++;
                 columns--;
             }
@@ -158,7 +205,7 @@ void Matrix::initialize() {
             }
             tmp->next = new List();
             while (columns != 0){
-                tmp->next->add(to_string(n), n);
+                tmp->next->add(n);
                 n++;
                 columns--;
             }
@@ -166,5 +213,92 @@ void Matrix::initialize() {
         rows--;
         columns = columnsBackup;
         this->length++;
+    }
+}
+
+bool Matrix::checkPlay() {
+    if (preLastPlayColumn == 0 && preLastPlayRow == 0){
+        this->searchWordsOneLetter();
+        return true;
+    }else{
+        bool horizontal = false;
+        bool vertical = false;
+        if (lastPlayRow == preLastPlayRow){
+            horizontal = true;
+        }if (lastPlayColumn == preLastPlayColumn){
+            vertical = true;
+        }if (!horizontal && !vertical){
+            return false;
+        }
+        //this->searchWords();
+        return true;
+    }
+
+}
+
+void Matrix::searchWordsOneLetter() {
+    string word = "";
+    WordList* wordList = WordList::getInstance();
+    int i = lastPlayRow - 1;
+    int j = lastPlayColumn - 1;
+    bool horizontal = false;
+    bool vertical = false;
+    Node* posv = index(i, lastPlayColumn);
+    Node* posh = index(lastPlayRow, j);
+    Node* tmp;
+    if (!posh->getLetter().empty()){
+        horizontal = true;
+    }if (!posv->getLetter().empty()){
+        vertical = true;
+    }if (!horizontal && !vertical){
+        wordList->addWord(index(lastPlayRow, lastPlayColumn)->getLetter());
+    }else{
+        string tmp;
+        if (vertical){
+            while (i != -1){
+                if (!index(i, lastPlayColumn)->getLetter().empty()){
+                    i--;
+                }else{
+                    i++;
+                    break;
+                }
+            }
+            if (i == -1){
+                i = 0;
+            }
+            while (i != 15){
+                tmp = index(i, lastPlayColumn)->getLetter();
+                if (!tmp.empty()){
+                    word.append(tmp);
+                    i++;
+                }else{
+                    break;
+                }
+            }
+            wordList->addWord(word);
+            word = "";
+        }if (horizontal){
+            while (j != -1){
+                if (!index(lastPlayRow, j)->getLetter().empty()){
+                    j--;
+                }else{
+                    j++;
+                    break;
+                }
+            }
+            if (j == -1){
+                j = 0;
+            }
+            while (j != 15){
+                tmp = index(lastPlayRow, j)->getLetter();
+                if (!tmp.empty()){
+                    word.append(tmp);
+                    j++;
+                }else{
+                    break;
+                }
+            }
+            wordList->addWord(word);
+        }
     }
 }

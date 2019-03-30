@@ -26,7 +26,7 @@ public:
 
     int getLenght();
     void setLenght(int lenght);
-    void add(string n, int id, int multiplier = 0);
+    void add(int id, int multiplier = 0);
     void display();
     Node* getHead();
     Node* index(int n);

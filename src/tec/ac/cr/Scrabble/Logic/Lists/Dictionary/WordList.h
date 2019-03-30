@@ -14,7 +14,7 @@ class WordList {
 
 public:
 
-    WordList() = default;
+    static WordList* getInstance();
 
     WordNode* head = nullptr;
 
@@ -25,6 +25,12 @@ public:
     bool checkWordsInList();
 
 private:
+
+    WordList() = default;
+    WordList(WordList const&)= default;
+    WordList& operator = (WordList const&) = default;
+
+    static WordList* wordList;
 
     int lenght = 0;
 

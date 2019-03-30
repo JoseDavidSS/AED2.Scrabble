@@ -16,7 +16,7 @@ class LastPlayList {
 
 public:
 
-    LastPlayList() = default;
+    static LastPlayList* getInstance();
 
     LastPlayNode* head = nullptr;
 
@@ -30,6 +30,12 @@ public:
     LastPlayList* deserialize(const char* json);
 
 private:
+
+    LastPlayList() = default;
+    LastPlayList(LastPlayList const&) = default;
+    LastPlayList& operator = (LastPlayList const&) = default;
+
+    static LastPlayList* lastPlayList;
 
     int lenght = 0;
 

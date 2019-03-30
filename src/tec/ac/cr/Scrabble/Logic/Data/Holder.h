@@ -20,8 +20,8 @@ public:
 
     static Holder* getInstance();
 
-    LetterList* letterList = new LetterList();
-    LastPlayList* lastPlayList = new LastPlayList();
+    LetterList* letterList = nullptr;
+    LastPlayList* lastPlayList = nullptr;
 
     bool getTurn();
     void setTurn(bool turn);

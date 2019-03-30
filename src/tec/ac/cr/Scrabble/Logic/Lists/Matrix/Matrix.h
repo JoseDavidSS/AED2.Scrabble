@@ -28,12 +28,24 @@ public:
     void setRows(int rows);
     int getColumns();
     void setColumns(int columns);
+    int getLastPlayRow();
+    void setLastPlayRow(int row);
+    int getLastPlayColumn();
+    void setLastPlayColumn(int column);
+    int getPreLastPlayRow();
+    void setPreLastPlayRow(int row);
+    int getPreLastPlayColumn();
+    void setPreLastPlayColumn(int column);
     void addRow(List* list);
     void addIndex(string letter, int i, int j);
+    void deleteIndex(string letter, int i, int j);
     void display();
     static Matrix* getInstance();
     Node* index(int i, int j);
     void initialize();
+    bool checkPlay();
+    void searchWordsOneLetter();
+
 
 private:
 
@@ -43,6 +55,7 @@ private:
 
     static Matrix* matrix;
     int length, rows, columns;
+    int lastPlayRow, lastPlayColumn, preLastPlayRow, preLastPlayColumn = 0;
 
     void assignMultipliers();
 
