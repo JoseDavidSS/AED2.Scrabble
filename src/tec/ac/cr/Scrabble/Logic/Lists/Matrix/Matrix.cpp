@@ -218,10 +218,10 @@ void Matrix::initialize() {
 
 bool Matrix::checkPlay() {
     if (preLastPlayColumn == 0 && preLastPlayRow == 0){
-        this->searchWordsOneLetter();
+        this->searchWords(lastPlayRow, lastPlayColumn, false);
         return true;
     }else{
-        bool horizontal = false;
+        bool horizontal = true;
         bool vertical = false;
         if (lastPlayRow == preLastPlayRow){
             horizontal = true;
@@ -229,34 +229,36 @@ bool Matrix::checkPlay() {
             vertical = true;
         }if (!horizontal && !vertical){
             return false;
+        }else{
+            this->searchWords(lastPlayRow, lastPlayColumn, false);
+            return true;
         }
-        //this->searchWords();
-        return true;
     }
 
 }
 
-void Matrix::searchWordsOneLetter() {
-    string word = "";
+void Matrix::searchWords(int row, int column, bool recursive) {
+    string word;
     WordList* wordList = WordList::getInstance();
-    int i = lastPlayRow - 1;
-    int j = lastPlayColumn - 1;
+    int i = row - 1;
+    int j = column - 1;
     bool horizontal = false;
     bool vertical = false;
-    Node* posv = index(i, lastPlayColumn);
-    Node* posh = index(lastPlayRow, j);
-    Node* tmp;
-    if (!posh->getLetter().empty()){
+    Node* posva = index(i, column);
+    Node* posvp = index(i + 2, column);
+    Node* posha = index(row, j);
+    Node* poshp = index(row, j + 2);
+    if (!posha->getLetter().empty() || !poshp->getLetter().empty()){
         horizontal = true;
-    }if (!posv->getLetter().empty()){
+    }if (!posva->getLetter().empty() || !posvp->getLetter().empty()){
         vertical = true;
     }if (!horizontal && !vertical){
-        wordList->addWord(index(lastPlayRow, lastPlayColumn)->getLetter());
+        wordList->addWord(index(row, column)->getLetter());
     }else{
         string tmp;
         if (vertical){
             while (i != -1){
-                if (!index(i, lastPlayColumn)->getLetter().empty()){
+                if (!index(i, column)->getLetter().empty()){
                     i--;
                 }else{
                     i++;
@@ -267,7 +269,7 @@ void Matrix::searchWordsOneLetter() {
                 i = 0;
             }
             while (i != 15){
-                tmp = index(i, lastPlayColumn)->getLetter();
+                tmp = index(i, column)->getLetter();
                 if (!tmp.empty()){
                     word.append(tmp);
                     i++;
@@ -279,7 +281,7 @@ void Matrix::searchWordsOneLetter() {
             word = "";
         }if (horizontal){
             while (j != -1){
-                if (!index(lastPlayRow, j)->getLetter().empty()){
+                if (!index(row, j)->getLetter().empty()){
                     j--;
                 }else{
                     j++;
@@ -290,7 +292,7 @@ void Matrix::searchWordsOneLetter() {
                 j = 0;
             }
             while (j != 15){
-                tmp = index(lastPlayRow, j)->getLetter();
+                tmp = index(row, j)->getLetter();
                 if (!tmp.empty()){
                     word.append(tmp);
                     j++;

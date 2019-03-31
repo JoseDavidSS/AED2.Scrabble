@@ -44,7 +44,7 @@ public:
     Node* index(int i, int j);
     void initialize();
     bool checkPlay();
-    void searchWordsOneLetter();
+    void searchWords(int row, int column, bool recursive);
 
 
 private:

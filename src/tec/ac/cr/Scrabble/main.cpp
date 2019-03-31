@@ -18,11 +18,12 @@ int main(int argc, char *argv[]){
     matrix->addIndex("o", 1, 2);
     matrix->addIndex("l", 1, 3);
     matrix->addIndex("a", 1, 4);
-    matrix->display();
     matrix->addIndex("n", 2, 4);
-    matrix->setLastPlayRow(0);
-    matrix->setLastPlayColumn(0);
     matrix->addIndex("o", 3, 4);
+    matrix->addIndex("o", 2, 3);
+    matrix->addIndex("l", 3, 3);
+    matrix->display();
+
     matrix->checkPlay();
 
 //    Client client;
