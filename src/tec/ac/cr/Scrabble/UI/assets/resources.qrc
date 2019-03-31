@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="background">menu_background.jpg</file>
+        <file alias="board">board.png</file>
+        <file alias="play">playButton.png</file>
+        <file alias="playON">playButtonON.png</file>
+        <file alias="logo">logo.png</file>
+        <file alias="host">host.png</file>
+        <file alias="join">join.png</file>
+        <file>joinON.png</file>
+        <file>hostON.png</file>
+    </qresource>
+</RCC>

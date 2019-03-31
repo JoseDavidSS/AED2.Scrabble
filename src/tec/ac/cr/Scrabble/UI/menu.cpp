@@ -6,9 +6,31 @@ Menu::Menu(QWidget *parent) :
     ui(new Ui::Menu)
 {
     ui->setupUi(this);
+    connect(ui->playButton, SIGNAL(click()), this, SLOT(toConnectWindow()));
 }
 
 Menu::~Menu()
 {
     delete ui;
+}
+
+void Menu::toConnectWindow() {
+    connectWindow = new ConnectWindow(this);
+    connectWindow->show();
+}
+
+void Menu::changeEvent(QEvent *e) {
+    QMainWindow::changeEvent(e);
+    switch (e->type()) {
+    case QEvent::LanguageChange:
+        ui->retranslateUi(this);
+        break;
+    default:
+        break;
+    }
+}
+
+void Menu::on_playButton_clicked() {
+    toConnectWindow();
+    hide();
 }
