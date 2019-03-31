@@ -13,7 +13,6 @@ using namespace std;
 int main(int argc, char *argv[]){
 
     Matrix* matrix = Matrix::getInstance();
-    matrix->display();
     matrix->addIndex("h", 1, 1);
     matrix->addIndex("o", 1, 2);
     matrix->addIndex("l", 1, 3);

@@ -218,7 +218,7 @@ void Matrix::initialize() {
 
 bool Matrix::checkPlay() {
     if (preLastPlayColumn == 0 && preLastPlayRow == 0){
-        this->searchWords(lastPlayRow, lastPlayColumn, false);
+        this->searchWords(lastPlayRow, lastPlayColumn);
         return true;
     }else{
         bool horizontal = true;
@@ -230,14 +230,14 @@ bool Matrix::checkPlay() {
         }if (!horizontal && !vertical){
             return false;
         }else{
-            this->searchWords(lastPlayRow, lastPlayColumn, false);
+            this->searchWords(lastPlayRow, lastPlayColumn);
             return true;
         }
     }
 
 }
 
-void Matrix::searchWords(int row, int column, bool recursive) {
+void Matrix::searchWords(int row, int column) {
     string word;
     WordList* wordList = WordList::getInstance();
     int i = row - 1;
@@ -253,7 +253,7 @@ void Matrix::searchWords(int row, int column, bool recursive) {
     }if (!posva->getLetter().empty() || !posvp->getLetter().empty()){
         vertical = true;
     }if (!horizontal && !vertical){
-        wordList->addWord(index(row, column)->getLetter());
+        cout << "Nel" << endl;
     }else{
         string tmp;
         if (vertical){
@@ -277,7 +277,9 @@ void Matrix::searchWords(int row, int column, bool recursive) {
                     break;
                 }
             }
-            wordList->addWord(word);
+            if (wordList->searchWord(word)){
+                wordList->addWord(word);
+            }
             word = "";
         }if (horizontal){
             while (j != -1){
@@ -300,7 +302,9 @@ void Matrix::searchWords(int row, int column, bool recursive) {
                     break;
                 }
             }
-            wordList->addWord(word);
+            if (wordList->searchWord(word)){
+                wordList->addWord(word);
+            }
         }
     }
 }

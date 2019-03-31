@@ -43,7 +43,7 @@ void WordList::addWord(string word) {
 
 bool WordList::searchWord(string word) {
     ifstream fin;
-    fin.open("/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/words.text");
+    fin.open("/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Dictionary/words.text");
     if (fin.fail()) {
         cout << "No hay ni pinga.\n";
         return false;
