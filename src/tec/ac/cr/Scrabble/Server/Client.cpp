@@ -77,7 +77,7 @@ int Client::run() {
 
 }
 
-static int Client::settingPort() {
+int Client::settingPort() {
 
     ifstream fin;
     fin.open("/home/jose/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/properties.text");
@@ -86,10 +86,12 @@ static int Client::settingPort() {
         cout << "No hay ni pinga.\n";
         return 0;
     }
+
     string search = "port: ";
     bool isFound = false;
     string returningPuerto;
-    int contador=0;
+    int counter = 0;
+
     while (!fin.eof()) {
         string temp;
         getline(fin, temp);
@@ -100,13 +102,15 @@ static int Client::settingPort() {
                 isFound = false;
                 break;
             }
-            contador = i;
+            counter = i;
         }
 
         if (isFound) {
-            for (int i = contador; i < 11; i++){
+
+            for (int i = counter; i < 11; i++){
                 returningPuerto += temp[i];
             }
+
             cout << "port encontrado\n";
             cout << returningPuerto;
             fin.close();
@@ -120,16 +124,16 @@ static int Client::settingPort() {
     }
 
     if (fin.eof()) {
+
         cout << "Puerto no encontrado F\n";
         fin.close();
         return 0;
+
     }
-
-
-
 }
 
-static string Client::settingIpAddress(){
+string Client::settingIpAddress(){
+
     ifstream fin;
     fin.open("/home/jose/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/properties.text");
 
@@ -137,13 +141,16 @@ static string Client::settingIpAddress(){
         cout << "No hay ni pinga.\n";
         return "";
     }
+
     string search = "ipAddress: ";
     bool isFound = false;
     string returningIpAddress;
     int contador=0;
+
     while (!fin.eof()) {
         string temp;
         getline(fin, temp);
+
         for (int i = 0; i < 11; i++) {
             if (temp[i] == search[i])
                 isFound = true;
@@ -160,6 +167,7 @@ static string Client::settingIpAddress(){
                 returningIpAddress += temp[i];
                 cout << i;
             }
+
             cout << "ipAddress encontrada";
             cout << returningIpAddress;
             fin.close();
