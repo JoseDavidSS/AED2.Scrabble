@@ -4,7 +4,11 @@
 
 #ifndef SCRABBLE_CLIENT_H
 #define SCRABBLE_CLIENT_H
+#include <string>
+#include <string.h>
+#include <iostream>
 
+using namespace std;
 
 #include "../Logic/Data/Holder.h"
 
@@ -23,6 +27,8 @@ private:
     Client& operator = (Client const&) = default;
 
     static Client* client;
+    static int settingPort();
+    static string settingIpAddress();
 
 };
 

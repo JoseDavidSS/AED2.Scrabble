@@ -6,9 +6,9 @@
 #include "algorithm"
 
 #include <string>
-#include<fstream>
-#include<iostream>
-#include<cstdlib>
+#include <fstream>
+#include <iostream>
+#include <cstdlib>
 
 WordList* WordList::wordList = nullptr;
 
