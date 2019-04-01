@@ -27,7 +27,6 @@ Client* Client::getInstance() {
 }
 
 Holder* Client::run(Holder* holder) {
-
     //	Create a socket
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == -1)
@@ -87,11 +86,9 @@ Holder* Client::run(Holder* holder) {
 
     //	Close the socket
     close(sock);
-
 }
 
 int Client::settingPort() {
-
     ifstream fin;
     fin.open("/home/jose/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/properties.text");
 
@@ -141,12 +138,10 @@ int Client::settingPort() {
         cout << "Puerto no encontrado F\n";
         fin.close();
         return 0;
-
     }
 }
 
 string Client::settingIpAddress(){
-
     ifstream fin;
     fin.open("/home/jose/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/properties.text");
 
@@ -193,5 +188,4 @@ string Client::settingIpAddress(){
         fin.close();
         return "fallo";
     }
-
 }
