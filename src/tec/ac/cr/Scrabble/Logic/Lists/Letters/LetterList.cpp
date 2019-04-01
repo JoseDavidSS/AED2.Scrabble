@@ -9,6 +9,15 @@
 
 using namespace std;
 
+LetterList* LetterList::letterList = nullptr;
+
+LetterList* LetterList::getInstance() {
+    if (!letterList){
+        letterList = new LetterList;
+    }
+    return letterList;
+}
+
 void LetterList::letterSorter() {
     insertNode("A", 1, 12);
     insertNode("E", 1, 12);

@@ -22,6 +22,7 @@ public:
 
     List* head = nullptr;
 
+    static Matrix* getInstance();
     int getLenght();
     void setLenght(int lenght);
     int getRows();
@@ -40,7 +41,6 @@ public:
     void addIndex(string letter, int i, int j);
     void deleteIndex(string letter, int i, int j);
     void display();
-    static Matrix* getInstance();
     Node* index(int i, int j);
     void initialize();
     bool checkPlay();

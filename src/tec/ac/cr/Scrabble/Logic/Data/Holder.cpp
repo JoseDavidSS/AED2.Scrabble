@@ -75,10 +75,27 @@ void Holder::serializer(Writer &writer) const {
     writer.String("codeToEnter");
     writer.Int(this->codeToEnter);
     writer.String("letterList");
-    writer.String(this->letterList->serialize().c_str());
-    writer.String("lastPlayList");
-    writer.String(this->lastPlayList->serialize().c_str());
-    writer.EndObject();
+    if (this->letterList == nullptr){
+        writer.Null();
+        writer.String("lastPlayList");
+        if (this->lastPlayList == nullptr){
+            writer.Null();
+            writer.EndObject();
+        }else{
+            writer.String(this->lastPlayList->serialize().c_str());
+            writer.EndObject();
+        }
+    }else{
+        writer.String(this->letterList->serialize().c_str());
+        writer.String("lastPlayList");
+        if (this->lastPlayList == nullptr){
+            writer.Null();
+            writer.EndObject();
+        }else{
+            writer.String(this->lastPlayList->serialize().c_str());
+            writer.EndObject();
+        }
+    }
 }
 
 Holder* Holder::deserialize(const char *json) {
@@ -90,7 +107,23 @@ Holder* Holder::deserialize(const char *json) {
     parsedHolder->setPoints(doc["points"].GetInt());
     parsedHolder->setPlayerName(doc["playerName"].GetString());
     parsedHolder->setCodetoEnter(doc["codeToEnter"].GetInt());
-    parsedHolder->letterList = this->letterList->deserialize(doc["letterList"].GetString());
-    parsedHolder->lastPlayList = this->lastPlayList->deserialize(doc["lastPlayList"].GetString());
-    return parsedHolder;
+    if (doc["letterList"].IsNull()){
+        parsedHolder->letterList = nullptr;
+        if (doc["lastPlayList"].IsNull()){
+            parsedHolder->lastPlayList = nullptr;
+            return parsedHolder;
+        }else{
+            parsedHolder->lastPlayList = this->lastPlayList->deserialize(doc["lastPlayList"].GetString());
+            return parsedHolder;
+        }
+    }else{
+        parsedHolder->letterList = this->letterList->deserialize(doc["letterList"].GetString());
+        if (doc["lastPlayList"].IsNull()){
+            parsedHolder->lastPlayList = nullptr;
+            return parsedHolder;
+        }else{
+            parsedHolder->lastPlayList = this->lastPlayList->deserialize(doc["lastPlayList"].GetString());
+            return parsedHolder;
+        }
+    }
 }

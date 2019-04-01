@@ -9,15 +9,16 @@
 
 using namespace std;
 
-void ASync::toDo() {
+int ASync::toDo() {
     cout << "Async Thread: "<< this_thread::get_id() << endl;
     cout << "I am inside async" << endl;
 }
 
-void ASync::aSyncFunction() {
+int ASync::aSyncFunction() {
     cout << "Main Thread: " << this_thread::get_id() << endl;
-    future<void> fn = async(launch::async, toDo);
+    future<int> fn = async(launch::async, toDo);
 
-    fn.get();
+    int a = fn.get();
+    return a;
 }
 

@@ -15,7 +15,7 @@ class LetterList {
 
 public:
 
-    LetterList() = default;
+    static LetterList* getInstance();
 
     LetterNode* head = nullptr;
 
@@ -31,6 +31,12 @@ public:
     LetterList* deserialize(const char* json);
 
 private:
+
+    LetterList() = default;
+    LetterList(LetterList const&) = default;
+    LetterList& operator = (LetterList const&) = default;
+
+    static LetterList* letterList;
 
     int length = 0;
 

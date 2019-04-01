@@ -13,8 +13,8 @@ public:
 
     ASync() = default;
 
-    void aSyncFunction();
-    static void toDo();
+    static int aSyncFunction();
+    static int toDo();
 
 };
 

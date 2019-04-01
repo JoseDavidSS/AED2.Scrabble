@@ -6,13 +6,23 @@
 #define SCRABBLE_CLIENT_H
 
 
+#include "../Logic/Data/Holder.h"
+
 class Client {
 
 public:
 
-    Client() = default;
+    static Client* getInstance();
 
-    static int run();
+    Holder* run(Holder* holder);
+
+private:
+
+    Client() = default;
+    Client(Client const&)= default;
+    Client& operator = (Client const&) = default;
+
+    static Client* client;
 
 };
 

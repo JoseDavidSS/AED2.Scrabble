@@ -14,13 +14,22 @@
 
 using namespace std;
 
-int Client::run() {
+Client* Client::client = nullptr;
+
+Client* Client::getInstance() {
+    if (!client){
+        client = new Client;
+    }
+    return client;
+}
+
+Holder* Client::run(Holder* holder) {
 
     //	Create a socket
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == -1)
     {
-        return 1;
+        cout << "Error" << endl;
     }
 
     //	Create a hint structure for the server we're connecting with
@@ -36,7 +45,7 @@ int Client::run() {
     int connectRes = connect(sock, (sockaddr*)&hint, sizeof(hint));
     if (connectRes == -1)
     {
-        return 1;
+        cout << "Error" << endl;
     }
 
     //	While loop:
@@ -47,8 +56,10 @@ int Client::run() {
     cout << "> ";
     getline(cin, userInput);
 
+    string jsonHolder = holder->serialize();
+
     //		Send to server
-    int sendRes = send(sock, userInput.c_str(), userInput.size() + 1, 0);
+    int sendRes = send(sock, jsonHolder.c_str(), jsonHolder.size() + 1, 0);
 
     if (sendRes == -1)
     {
@@ -66,7 +77,9 @@ int Client::run() {
     else
     {
         //		Display response
-        cout << "SERVER> " << string(buf, bytesReceived) << "\r\n";
+        jsonHolder = string(buf, bytesReceived);
+        cout << "SERVER> " << jsonHolder << "\r\n";
+        holder = holder->deserialize(jsonHolder.c_str());
     }
 
     //	Close the socket
