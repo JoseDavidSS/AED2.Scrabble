@@ -33,10 +33,9 @@ public:
     void setPlayerName(string playerName);
     int getCodeToEnter();
     void setCodetoEnter(int codeToEnter);
-    string serialize();
-    template<typename Writer>
-    void serializer(Writer& writer) const;
-    Holder* deserialize(const char* json);
+
+    static Holder* read(const QJsonObject &json);
+    void write(QJsonObject& json) const;
 
 private:
 
@@ -50,6 +49,7 @@ private:
     int points = 0; //Puntos del jugador
     string playerName = ""; //Nombre del jugador
     int codeToEnter = 0; //Codigo para ingresar a una partida o para crear una
+
 
 };
 

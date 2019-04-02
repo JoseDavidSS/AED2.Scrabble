@@ -2,6 +2,7 @@
 // Created by kevin on 24/03/19.
 //
 
+#include <QtCore/QJsonArray>
 #include "LetterNode.h"
 #include "../../rapidjson/document.h"
 
@@ -29,44 +30,18 @@ int LetterNode::getCounters() {
     return this->counter;
 }
 
-string LetterNode::serialize() {
-    StringBuffer sB;
-    Writer<StringBuffer> writer(sB);
-    this->serializer(writer);
-    return sB.GetString();
-}
-
-template<typename Writer>
-void LetterNode::serializer(Writer &writer) const {
-    writer.StartObject();
-    writer.String("letter");
-    writer.String(this->letter.c_str());
-    writer.String("point");
-    writer.Int(this->point);
-    writer.String("counter");
-    writer.Int(this->counter);
-    writer.String("next");
-    if (this->next == nullptr){
-        writer.Null();
-        writer.EndObject();
-    }else{
-        writer.String(this->next->serialize().c_str());
-        writer.EndObject();
+void LetterNode::read(const QJsonObject &json) {
+    if (json.contains("letter") && json["letter"].isString()){
+        letter = (json["letter"].toString().toUtf8().constData());
+    }if (json.contains("point") && json["point"].isDouble()){
+        point = (json["point"].toInt());
+    }if (json.contains("counter") && json["counter"].isDouble()){
+        counter = (json["counter"].toInt());
     }
 }
 
-LetterNode* LetterNode::deserialize(const char *json) {
-    LetterNode* parsedNode = new LetterNode();
-    Document doc;
-    doc.Parse(json);
-    parsedNode->setLetter(doc["letter"].GetString());
-    parsedNode->setPoints(doc["point"].GetInt());
-    parsedNode->setCounters(doc["counter"].GetInt());
-    if (doc["next"].IsNull()){
-        parsedNode->next = nullptr;
-        return parsedNode;
-    }else{
-        parsedNode->next = this->next->deserialize(doc["next"].GetString());
-        return parsedNode;
-    }
+void LetterNode::write(QJsonObject &json) const {
+    json["letter"] = QString::fromStdString(letter);
+    json["point"] = point;
+    json["counter"] = counter;
 }

@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <QtCore/QJsonArray>
 #include "LastPlayList.h"
 #include "../../rapidjson/document.h"
 
@@ -55,38 +56,33 @@ void LastPlayList::deletePlay(string letter, int row, int column) {
     }
 }
 
-string LastPlayList::serialize() {
-    StringBuffer sB;
-    Writer<StringBuffer> writer(sB);
-    this->serializer(writer);
-    return sB.GetString();
-}
-
-template<typename Writer>
-void LastPlayList::serializer(Writer &writer) const {
-    writer.StartObject();
-    writer.String("lenght");
-    writer.Int(this->lenght);
-    writer.String("head");
-    if (this->head == nullptr){
-        writer.Null();
-        writer.EndObject();
+LastPlayList* LastPlayList::read(const QJsonObject& json, const QJsonArray& nodesArray) {
+    LastPlayList* parsedList = new LastPlayList();
+    if (!nodesArray.isEmpty()){
+        for (int i = 0; i < nodesArray.size(); i++){
+            QJsonObject node = nodesArray[i].toObject();
+            LastPlayNode* tmp = new LastPlayNode();
+            tmp->read(node);
+            parsedList->addPlay(tmp->getLetter(), tmp->getRow(), tmp->getColumn());
+        }
+        return parsedList;
     }else{
-        writer.String(this->head->serialize().c_str());
-        writer.EndObject();
+        parsedList->head = nullptr;
+        return parsedList;
     }
 }
 
-LastPlayList* LastPlayList::deserialize(const char *json) {
-    LastPlayList* parsedList = new LastPlayList();
-    Document doc;
-    doc.Parse(json);
-    parsedList->setLenght(doc["lenght"].GetInt());
-    if (doc["head"].IsNull()){
-        parsedList->head = nullptr;
-        return parsedList;
+QJsonArray& LastPlayList::write(QJsonObject &json, QJsonArray& nodesArray) const {
+    if (this->head == nullptr){
+        return nodesArray;
     }else{
-        parsedList->head = this->head->deserialize(doc["head"].GetString());
-        return parsedList;
+        LastPlayNode* tmp = this->head;
+        while (tmp != nullptr){
+            QJsonObject node;
+            tmp->write(node);
+            nodesArray.append(node);
+            tmp = tmp->next;
+        }
+        return nodesArray;
     }
 }

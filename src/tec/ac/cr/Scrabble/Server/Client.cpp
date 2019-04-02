@@ -13,6 +13,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <QtCore/QJsonDocument>
 
 
 using namespace std;
@@ -26,7 +27,7 @@ Client* Client::getInstance() {
     return client;
 }
 
-Holder* Client::run(Holder* holder) {
+Holder* Client::run(QJsonObject& json) {
     //	Create a socket
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == -1)
@@ -35,8 +36,8 @@ Holder* Client::run(Holder* holder) {
     }
 
     //	Create a hint structure for the server we're connecting with
-    int port = settingPort();
-    string ipAddress = settingIpAddress();
+    int port = 54000;
+    string ipAddress = "127.0.0.1";
 
     sockaddr_in hint;
     hint.sin_family = AF_INET;
@@ -58,10 +59,13 @@ Holder* Client::run(Holder* holder) {
     cout << "> ";
     getline(cin, userInput);
 
-    string jsonHolder = holder->serialize();
+    QJsonDocument doc(json);
+    QByteArray ba = doc.toJson();
+    QString qstr = QString(ba);
+    string str = qstr.toStdString();
 
     //		Send to server
-    int sendRes = send(sock, jsonHolder.c_str(), jsonHolder.size() + 1, 0);
+    int sendRes = send(sock, str.c_str(), str.size() + 1, 0);
 
     if (sendRes == -1)
     {
@@ -79,13 +83,16 @@ Holder* Client::run(Holder* holder) {
     else
     {
         //		Display response
-        jsonHolder = string(buf, bytesReceived);
-        cout << "SERVER> " << jsonHolder << "\r\n";
-        holder = holder->deserialize(jsonHolder.c_str());
+        str = string(buf, 0, bytesReceived);
+        cout << "SERVER> " << str << "\r\n";
+        QJsonDocument doc2 = QJsonDocument::fromJson(QByteArray(str.c_str()));
+        json = doc2.object();
     }
 
     //	Close the socket
     close(sock);
+
+    return Holder::read(json);
 }
 
 int Client::settingPort() {

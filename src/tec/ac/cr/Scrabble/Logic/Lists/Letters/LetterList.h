@@ -25,10 +25,9 @@ public:
     void deleteNode (string letter);
     void printList ();
     void letterSorter();
-    string serialize();
-    template<typename Writer>
-    void serializer(Writer& writer) const;
-    LetterList* deserialize(const char* json);
+
+    static LetterList* read(const QJsonObject& json, const QJsonArray& nodesArray);
+    QJsonArray& write(QJsonObject& json, QJsonArray& nodesArray) const;
 
 private:
 

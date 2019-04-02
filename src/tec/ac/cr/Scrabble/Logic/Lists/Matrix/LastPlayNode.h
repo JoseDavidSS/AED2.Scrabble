@@ -6,6 +6,7 @@
 #define SCRABBLE_LASTPLAYNODE_H
 
 #include <string>
+#include <QtCore/QJsonObject>
 #include "../../rapidjson/prettywriter.h"
 
 using namespace std;
@@ -31,10 +32,9 @@ public:
     void setRow(int i);
     int getColumn();
     void setColumn(int j);
-    string serialize();
-    template<typename Writer>
-    void serializer(Writer& writer) const;
-    LastPlayNode* deserialize(const char* json);
+
+    void read(const QJsonObject &json);
+    void write(QJsonObject &json) const;
 
 private:
 

@@ -4,6 +4,7 @@
 
 #include <string>
 #include <iostream>
+#include <QtCore/QJsonArray>
 #include "LetterList.h"
 #include "../../rapidjson/document.h"
 
@@ -14,6 +15,7 @@ LetterList* LetterList::letterList = nullptr;
 LetterList* LetterList::getInstance() {
     if (!letterList){
         letterList = new LetterList;
+        letterList->letterSorter();
     }
     return letterList;
 }
@@ -104,38 +106,33 @@ void LetterList::printList() {
     }
 }
 
-string LetterList::serialize() {
-    StringBuffer sB;
-    Writer<StringBuffer> writer(sB);
-    this->serializer(writer);
-    return sB.GetString();
-}
-
-template<typename Writer>
-void LetterList::serializer(Writer &writer) const {
-    writer.StartObject();
-    writer.String("lenght");
-    writer.Int(this->length);
-    writer.String("head");
-    if (this->head == nullptr){
-        writer.Null();
-        writer.EndObject();
+LetterList* LetterList::read(const QJsonObject& json, const QJsonArray& nodesArray) {
+    LetterList* parsedList = new LetterList();
+    if (!nodesArray.empty()){
+        for (int i = 0; i < nodesArray.size(); i++){
+            QJsonObject node = nodesArray[i].toObject();
+            LetterNode* tmp = new LetterNode();
+            tmp->read(node);
+            parsedList->insertNode(tmp->getLetter(), tmp->getPoints(), tmp->getCounters());
+        }
+        return parsedList;
     }else{
-        writer.String(this->head->serialize().c_str());
-        writer.EndObject();
+        parsedList->head = nullptr;
+        return parsedList;
     }
 }
 
-LetterList* LetterList::deserialize(const char *json) {
-    LetterList* parsedList = new LetterList();
-    Document doc;
-    doc.Parse(json);
-    parsedList->setLenght(doc["lenght"].GetInt());
-    if (doc["head"].IsNull()){
-        parsedList->head = nullptr;
-        return parsedList;
+QJsonArray& LetterList::write(QJsonObject& json, QJsonArray& nodesArray) const {
+    if (this->head == nullptr){
+        return nodesArray;
     }else{
-        parsedList->head = this->head->deserialize(doc["head"].GetString());
-        return parsedList;
+        LetterNode* tmp = this->head;
+        while (tmp != nullptr){
+            QJsonObject node;
+            tmp->write(node);
+            nodesArray.append(node);
+            tmp = tmp->next;
+        }
+        return nodesArray;
     }
 }

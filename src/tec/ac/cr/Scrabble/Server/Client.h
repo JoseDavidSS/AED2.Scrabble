@@ -18,7 +18,7 @@ public:
 
     static Client* getInstance();
 
-    Holder* run(Holder* holder);
+    Holder* run(QJsonObject& json);
 
 private:
 

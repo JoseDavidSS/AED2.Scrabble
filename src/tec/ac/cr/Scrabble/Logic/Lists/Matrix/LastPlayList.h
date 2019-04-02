@@ -24,10 +24,9 @@ public:
     void setLenght(int lenght);
     void addPlay(string letter, int row, int column);
     void deletePlay(string letter, int row, int column);
-    string serialize();
-    template<typename Writer>
-    void serializer(Writer& writer) const;
-    LastPlayList* deserialize(const char* json);
+
+    static LastPlayList* read(const QJsonObject& json, const QJsonArray& nodesArray);
+    QJsonArray& write(QJsonObject& json, QJsonArray& nodesArray) const;
 
 private:
 

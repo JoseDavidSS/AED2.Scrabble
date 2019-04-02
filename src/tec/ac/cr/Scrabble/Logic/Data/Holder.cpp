@@ -2,6 +2,7 @@
 // Created by kevin on 19/03/19.
 //
 
+#include <QtCore/QJsonArray>
 #include "Holder.h"
 #include "../rapidjson/document.h"
 
@@ -54,76 +55,67 @@ void Holder::setCodetoEnter(int codeToEnter) {
     this->codeToEnter = codeToEnter;
 }
 
-string Holder::serialize() {
-    StringBuffer sB;
-    Writer<StringBuffer> writer(sB);
-    this->serializer(writer);
-    return sB.GetString();
-}
-
-template<typename Writer>
-void Holder::serializer(Writer &writer) const {
-    writer.StartObject();
-    writer.String("turn");
-    writer.Bool(this->turn);
-    writer.String("validatedPlay");
-    writer.Bool(this->validatedPlay);
-    writer.String("points");
-    writer.Int(this->points);
-    writer.String("playerName");
-    writer.String(this->playerName.c_str());
-    writer.String("codeToEnter");
-    writer.Int(this->codeToEnter);
-    writer.String("letterList");
-    if (this->letterList == nullptr){
-        writer.Null();
-        writer.String("lastPlayList");
-        if (this->lastPlayList == nullptr){
-            writer.Null();
-            writer.EndObject();
+Holder* Holder::read(const QJsonObject &json) {
+    Holder* parsedHolder = new Holder();
+    if (json.contains("turn") && json["turn"].isBool()){
+        parsedHolder->setTurn(json["turn"].toBool());
+    }if (json.contains("validatedPlay") && json["validatedPlay"].isBool()){
+        parsedHolder->setValidatedPlay(json["validatedPlay"].toBool());
+    }if (json.contains("points") && json["points"].isDouble()){
+        parsedHolder->setPoints(json["points"].toInt());
+    }if (json.contains("playerName") && json["playerName"].isString()){
+        parsedHolder->setPlayerName(json["playerName"].toString().toUtf8().constData());
+    }if (json.contains("codeToEnter") && json["codeToEnter"].isDouble()){
+        parsedHolder->setCodetoEnter(json["codeToEnter"].toInt());
+    }if (json.contains("letterList") && json["letterList"].isArray()){
+        QJsonObject json1;
+        parsedHolder->letterList = LetterList::read(json1, json["letterList"].toArray());
+        if (json.contains("lastPlayList") && json["lastPlayList"].isArray()){
+            QJsonObject json2;
+            parsedHolder->lastPlayList = LastPlayList::read(json2, json["lastPlayList"].toArray());
+            return parsedHolder;
         }else{
-            writer.String(this->lastPlayList->serialize().c_str());
-            writer.EndObject();
+            parsedHolder->lastPlayList = nullptr;
+            return parsedHolder;
         }
     }else{
-        writer.String(this->letterList->serialize().c_str());
-        writer.String("lastPlayList");
-        if (this->lastPlayList == nullptr){
-            writer.Null();
-            writer.EndObject();
+        parsedHolder->letterList = nullptr;
+        if (json.contains("lastPlayList") && json["lastPlayList"].isArray()){
+            QJsonObject json2;
+            parsedHolder->lastPlayList = LastPlayList::read(json2, json["lastPlayList"].toArray());
+            return parsedHolder;
         }else{
-            writer.String(this->lastPlayList->serialize().c_str());
-            writer.EndObject();
+            parsedHolder->lastPlayList = nullptr;
+            return parsedHolder;
         }
     }
 }
 
-Holder* Holder::deserialize(const char *json) {
-    Holder* parsedHolder = new Holder();
-    Document doc;
-    doc.Parse(json);
-    parsedHolder->setTurn(doc["turn"].GetBool());
-    parsedHolder->setValidatedPlay(doc["validatedPlay"].GetBool());
-    parsedHolder->setPoints(doc["points"].GetInt());
-    parsedHolder->setPlayerName(doc["playerName"].GetString());
-    parsedHolder->setCodetoEnter(doc["codeToEnter"].GetInt());
-    if (doc["letterList"].IsNull()){
-        parsedHolder->letterList = nullptr;
-        if (doc["lastPlayList"].IsNull()){
-            parsedHolder->lastPlayList = nullptr;
-            return parsedHolder;
+void Holder::write(QJsonObject &json) const {
+    json["turn"] = turn;
+    json["validatedPlay"] = validatedPlay;
+    json["points"] = points;
+    json["playerName"] = QString::fromStdString(playerName);
+    json["codeToEnter"] = codeToEnter;
+    if (letterList != nullptr){
+        QJsonArray array1;
+        QJsonObject json1;
+        json["letterList"] = letterList->write(json1, array1);
+        if (lastPlayList != nullptr){
+            QJsonArray array2;
+            QJsonObject json2;
+            json["lastPlayList"] = lastPlayList->write(json2, array2);
         }else{
-            parsedHolder->lastPlayList = this->lastPlayList->deserialize(doc["lastPlayList"].GetString());
-            return parsedHolder;
+            json["lastPlayList"] = QString::fromStdString("null");
         }
     }else{
-        parsedHolder->letterList = this->letterList->deserialize(doc["letterList"].GetString());
-        if (doc["lastPlayList"].IsNull()){
-            parsedHolder->lastPlayList = nullptr;
-            return parsedHolder;
+        json["letterList"] = QString::fromStdString("null");
+        if (lastPlayList != nullptr){
+            QJsonArray array2;
+            QJsonObject json2;
+            json["lastPlayList"] = lastPlayList->write(json2, array2);
         }else{
-            parsedHolder->lastPlayList = this->lastPlayList->deserialize(doc["lastPlayList"].GetString());
-            return parsedHolder;
+            json["lastPlayList"] = QString::fromStdString("null");
         }
     }
 }

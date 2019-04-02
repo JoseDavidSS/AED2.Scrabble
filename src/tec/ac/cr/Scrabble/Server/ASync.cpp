@@ -3,6 +3,8 @@
 //
 
 #include "ASync.h"
+#include "../Logic/Data/Holder.h"
+#include "Client.h"
 #include <pthread.h>
 #include <future>
 #include <iostream>
@@ -10,8 +12,11 @@
 using namespace std;
 
 int ASync::toDo() {
-    cout << "Async Thread: "<< this_thread::get_id() << endl;
-    cout << "I am inside async" << endl;
+    Holder* holder = Holder::getInstance();
+    QJsonObject json;
+    holder->write(json);
+    Client* client = Client::getInstance();
+    client->run(json);
 }
 
 int ASync::aSyncFunction() {

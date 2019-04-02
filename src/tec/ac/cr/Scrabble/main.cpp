@@ -7,10 +7,22 @@
 
 #include <iostream>
 #include <QApplication>
+#include <QtCore/QJsonDocument>
 
 using namespace std;
 
 int main(int argc, char *argv[]){
+
+
+    holder->letterList = LetterList::getInstance();
+
+    QJsonDocument doc(json);
+    QByteArray ba = doc.toJson();
+    QString qstr = QString(ba);
+    string str = qstr.toStdString();
+    cout << str << endl;
+    Holder* holder2 = new Holder();
+    holder2->read(json);
 
     /* Matrix* matrix = Matrix::getInstance();
      matrix->addIndex("h", 1, 1);
@@ -22,18 +34,16 @@ int main(int argc, char *argv[]){
      matrix->addIndex("o", 2, 3);
      matrix->addIndex("l", 3, 3);
      matrix->display();
-     matrix->checkPlay();*/
+     matrix->checkPlay();
 
-    Holder* holder = Holder::getInstance();
-    string jsonHolder = holder->serialize();
-    cout << jsonHolder << endl;
-    Client* client = Client::getInstance();
-    client->run(holder);
+    ASync* async = new ASync();
+    async->aSyncFunction();
 
     QApplication a(argc, argv);
         Menu w;
         w.show();
 
         return a.exec();
-
+*/
 }
+
