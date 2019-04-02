@@ -43,7 +43,7 @@ void WordList::addWord(string word) {
 
 bool WordList::searchWord(string word) {
     ifstream fin;
-    fin.open("/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Dictionary/words.text");
+    fin.open("/home/chus/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Dictionary/words.text");
     if (fin.fail()) {
         cout << "No hay ni pinga.\n";
         return false;
@@ -62,11 +62,12 @@ bool WordList::searchWord(string word) {
             }
         }
 
-        if (isFound) {
-            cout << "Su palabra si esta y es ";
-            cout << temp;
-            fin.close();
-            return true;
+        if(isFound)
+            if (isFound) {
+                cout << "Su palabra si esta y es ";
+                cout << search;
+                fin.close();
+                break;
         }
     }
 
