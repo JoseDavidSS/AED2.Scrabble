@@ -54,7 +54,6 @@ Holder* Client::run(QJsonObject& json) {
     //	While loop:
     char buf[4096];
     string userInput;
-
     //		Enter lines of text
     cout << "> ";
     getline(cin, userInput);
@@ -128,8 +127,10 @@ int Client::settingPort() {
                 returningPuerto += temp[i];
             }
 
-            cout << "port encontrado\n";
+            cout << "port encontrado:";
             cout << returningPuerto;
+            cout << "\n";
+
             fin.close();
 
             stringstream toConvert(returningPuerto);
@@ -174,17 +175,17 @@ string Client::settingIpAddress(){
                 break;
             }
             contador = i;
-            cout << contador;
         }
 
         if (isFound) {
-            for (int i = contador; i < 26; i++){
+            for (int i = contador+1; i < 25; i++){
                 returningIpAddress += temp[i];
-                cout << i;
             }
 
-            cout << "ipAddress encontrada";
+            cout << "ipAddress encontrada:";
             cout << returningIpAddress;
+            cout << "\n";
+
             fin.close();
             return returningIpAddress;
         }
