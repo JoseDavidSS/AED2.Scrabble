@@ -22,7 +22,6 @@ int ASync::toDo() {
 int ASync::aSyncFunction() {
     cout << "Main Thread: " << this_thread::get_id() << endl;
     future<int> fn = async(launch::async, toDo);
-
     int a = fn.get();
     return a;
 }

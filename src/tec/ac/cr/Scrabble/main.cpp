@@ -13,17 +13,6 @@ using namespace std;
 
 int main(int argc, char *argv[]){
 
-
-    holder->letterList = LetterList::getInstance();
-
-    QJsonDocument doc(json);
-    QByteArray ba = doc.toJson();
-    QString qstr = QString(ba);
-    string str = qstr.toStdString();
-    cout << str << endl;
-    Holder* holder2 = new Holder();
-    holder2->read(json);
-
     /* Matrix* matrix = Matrix::getInstance();
      matrix->addIndex("h", 1, 1);
      matrix->addIndex("o", 1, 2);
@@ -34,12 +23,12 @@ int main(int argc, char *argv[]){
      matrix->addIndex("o", 2, 3);
      matrix->addIndex("l", 3, 3);
      matrix->display();
-     matrix->checkPlay();
+     matrix->checkPlay();*/
 
     ASync* async = new ASync();
     async->aSyncFunction();
 
-    QApplication a(argc, argv);
+    /*QApplication a(argc, argv);
         Menu w;
         w.show();
 

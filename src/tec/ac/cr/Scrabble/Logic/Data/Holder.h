@@ -44,12 +44,11 @@ private:
     Holder& operator = (Holder const&) = default;
 
     static Holder* holder;
-    bool turn = false; //Este indica si es el turno del jugador o no
-    bool validatedPlay = false; // Este indica si la jugada es validada por el server
-    int points = 0; //Puntos del jugador
-    string playerName = ""; //Nombre del jugador
-    int codeToEnter = 0; //Codigo para ingresar a una partida o para crear una
-
+    bool turn = false;
+    bool validatedPlay = false;
+    int points = 0;
+    string playerName = "";
+    int codeToEnter = 0;
 
 };
 
