@@ -19,6 +19,7 @@ class Holder {
 public:
 
     static Holder* getInstance();
+    static void setInstance(Holder* nholder);
 
     LetterList* letterList = nullptr;
     LastPlayList* lastPlayList = nullptr;

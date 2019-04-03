@@ -15,6 +15,10 @@ Holder* Holder::getInstance() {
     return holder;
 }
 
+void Holder::setInstance(Holder* nholder) {
+    holder = nholder;
+}
+
 bool Holder::getTurn() {
     return this->turn;
 }

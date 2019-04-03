@@ -36,8 +36,8 @@ Holder* Client::run(QJsonObject& json) {
     }
 
     //	Create a hint structure for the server we're connecting with
-    int port = 54000;
-    string ipAddress = "127.0.0.1";
+    int port = settingPort();
+    string ipAddress = settingIpAddress();
 
     sockaddr_in hint;
     hint.sin_family = AF_INET;
@@ -96,7 +96,7 @@ Holder* Client::run(QJsonObject& json) {
 
 int Client::settingPort() {
     ifstream fin;
-    fin.open("/home/jose/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/properties.text");
+    fin.open("/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/properties.text");
 
     if (fin.fail()) {
         cout << "No hay ni pinga.\n";
@@ -151,7 +151,7 @@ int Client::settingPort() {
 
 string Client::settingIpAddress(){
     ifstream fin;
-    fin.open("/home/jose/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/properties.text");
+    fin.open("/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/properties.text");
 
     if (fin.fail()) {
         cout << "No hay ni pinga.\n";
