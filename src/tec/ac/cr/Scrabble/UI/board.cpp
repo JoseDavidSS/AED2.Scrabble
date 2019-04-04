@@ -12,7 +12,7 @@ Board::Board(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    int width = 600;
+    int width = 800;
     int height = 600;
 
     scene = new QGraphicsScene(this);
@@ -23,9 +23,18 @@ Board::Board(QWidget *parent) :
 
     view->setStyleSheet("background: transparent");
 
+    initializeBoard();
+}
+
+void Board::assignLetter(DraggableRectItem* dItem, QString letter) {
+    QString dir = "://letters/" + letter + ".png";
+    QPixmap pixmap = QPixmap(dir);
+    QPixmap scaled = pixmap.scaled(30,30);
+    dItem->setBrush(QBrush(scaled));
+}
+
+void Board::initializeBoard(){
     QRectF rect(0,0,30,30);
-
-
     double xpos = 0.5;
     double ypos = 0;
 
@@ -40,13 +49,22 @@ Board::Board(QWidget *parent) :
         ypos += 39.7;
     }
 
-    DraggableRectItem* dItem = new DraggableRectItem;
-    scene->addItem(dItem);
-    dItem->setRect(rect);
-    dItem->setPos(500,100);
-    //dItem->setBrush(QBrush(QColor("#ffa07a")));
-    dItem->setAnchorPoint(dItem->pos());
+    xpos = 600;
+    ypos = 100;
 
+    for(int i = 0; i < 2; i++) {
+        for(int i = 0; i < 3; i++) {
+            DraggableRectItem* dItem = new DraggableRectItem();
+            scene->addItem(dItem);
+            dItem->setRect(rect);
+            dItem->setPos(xpos,ypos);
+            xpos += 50;
+            assignLetter(dItem, "A");
+            dItem->setAnchorPoint(dItem->pos());
+        }
+        xpos = 600;
+        ypos += 50;
+    }
 }
 
 Board::~Board()

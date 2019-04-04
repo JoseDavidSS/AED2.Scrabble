@@ -5,6 +5,7 @@
 #include <QGraphicsView>
 #include "scene.h"
 #include "customrectitem.h"
+#include "draggablerectitem.h"
 
 namespace Ui {
 class Board;
@@ -17,6 +18,8 @@ class Board : public QMainWindow
 public:
     explicit Board(QWidget *parent = nullptr);
     ~Board();
+    void assignLetter(DraggableRectItem* dItem, QString letter);
+    void initializeBoard();
 
 private:
     Ui::Board *ui;
