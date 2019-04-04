@@ -20,6 +20,7 @@ public:
     ~Board();
     void assignLetter(DraggableRectItem* dItem, QString letter);
     void initializeBoard();
+    QString randomLetter();
 
 private:
     Ui::Board *ui;

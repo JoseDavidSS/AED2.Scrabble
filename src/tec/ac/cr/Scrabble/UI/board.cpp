@@ -5,6 +5,7 @@
 #include <QGraphicsRectItem>
 #include "draggablerectitem.h"
 #include <QStyleOptionGraphicsItem>
+#include <unordered_set>
 
 Board::Board(QWidget *parent) :
     QMainWindow(parent),
@@ -59,12 +60,21 @@ void Board::initializeBoard(){
             dItem->setRect(rect);
             dItem->setPos(xpos,ypos);
             xpos += 50;
-            assignLetter(dItem, "A");
+            assignLetter(dItem, randomLetter());
             dItem->setAnchorPoint(dItem->pos());
         }
         xpos = 600;
         ypos += 50;
     }
+}
+
+QString Board::randomLetter() {
+    const QString possibleCharacters("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    QString randomString;
+    int index = qrand() % possibleCharacters.length();
+    QChar nextChar = possibleCharacters.at(index);
+    randomString.append(nextChar);
+    return randomString;
 }
 
 Board::~Board()
