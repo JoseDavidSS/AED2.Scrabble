@@ -9,5 +9,34 @@
         <file alias="join">join.png</file>
         <file>joinON.png</file>
         <file>hostON.png</file>
+        <file>letters/Z.png</file>
+        <file>letters/Y.png</file>
+        <file>letters/X.png</file>
+        <file>letters/V.png</file>
+        <file>letters/U.png</file>
+        <file>letters/T.png</file>
+        <file>letters/SPECIAL.png</file>
+        <file>letters/S.png</file>
+        <file>letters/RR.png</file>
+        <file>letters/R.png</file>
+        <file>letters/Q.png</file>
+        <file>letters/P.png</file>
+        <file>letters/O.png</file>
+        <file>letters/NN.png</file>
+        <file>letters/N.png</file>
+        <file>letters/M.png</file>
+        <file>letters/LL.png</file>
+        <file>letters/L.png</file>
+        <file>letters/J.png</file>
+        <file>letters/I.png</file>
+        <file>letters/H.png</file>
+        <file>letters/G.png</file>
+        <file>letters/F.png</file>
+        <file>letters/E.png</file>
+        <file>letters/D.png</file>
+        <file>letters/CH.png</file>
+        <file>letters/C.png</file>
+        <file>letters/B.png</file>
+        <file>letters/A.png</file>
     </qresource>
 </RCC>

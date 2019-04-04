@@ -23,7 +23,7 @@ int main(int argc, char *argv[]){
      matrix->addIndex("o", 2, 3);
      matrix->addIndex("l", 3, 3);
      matrix->display();
-     matrix->checkPlay();*/
+     matrix->checkPlay();
 
     ASync* async = new ASync();
     async->thread();
@@ -54,12 +54,13 @@ int main(int argc, char *argv[]){
         }
 
     }
+    */
 
-    /*QApplication a(argc, argv);
+    QApplication a(argc, argv);
         Menu w;
         w.show();
 
         return a.exec();
-*/
+
 }
 

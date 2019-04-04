@@ -3,14 +3,11 @@
 
 Menu::Menu(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::Menu)
-{
+    ui(new Ui::Menu) {
     ui->setupUi(this);
-    connect(ui->playButton, SIGNAL(click()), this, SLOT(toConnectWindow()));
 }
 
-Menu::~Menu()
-{
+Menu::~Menu() {
     delete ui;
 }
 
