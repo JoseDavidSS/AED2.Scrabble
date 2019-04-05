@@ -36,8 +36,8 @@
    <widget class="QPushButton" name="hostButton">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>120</y>
+      <x>220</x>
+      <y>200</y>
       <width>391</width>
       <height>141</height>
      </rect>
@@ -66,7 +66,7 @@
    <widget class="QPushButton" name="joinButton">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>40</x>
       <y>360</y>
       <width>401</width>
       <height>161</height>
@@ -96,8 +96,8 @@
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>330</y>
+      <x>460</x>
+      <y>420</y>
       <width>291</width>
       <height>41</height>
      </rect>
@@ -113,7 +113,36 @@ color: white;
 font-size: 20pt</string>
     </property>
     <property name="text">
-     <string/>
+     <string>Room number</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string>IP TO CONNECT TO</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>80</y>
+      <width>291</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent; 
+color: white;
+font-size: 20pt</string>
+    </property>
+    <property name="text">
+     <string>Enter name</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

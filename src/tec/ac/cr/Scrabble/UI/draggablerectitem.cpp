@@ -35,7 +35,11 @@ void DraggableRectItem::mouseReleaseEvent(QGraphicsSceneMouseEvent *event){
                         closestItem = item;
                     }
                 }
-            this->setPos(closestItem->scenePos());
+            if (closestItem->acceptDrops() == false) {
+                this->setPos(closestItem->scenePos());
+            } else {
+                this->setPos(anchorPoint);
+            }
         }
         m_dragged = false;
     }
