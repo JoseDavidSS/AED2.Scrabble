@@ -5,6 +5,8 @@
 #ifndef SCRABBLE_ASYNC_H
 #define SCRABBLE_ASYNC_H
 
+#include "../Logic/Data/Holder.h"
+
 using namespace std;
 
 class ASync {
@@ -13,8 +15,10 @@ public:
 
     ASync() = default;
 
-    static int aSyncFunction();
-    static int toDo();
+    static Holder* thread();
+    static Holder* toSend();
+    static Holder* thread2();
+    static Holder* toSend2();
 
 };
 

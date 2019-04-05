@@ -24,7 +24,7 @@ protected:
 
 private:
     Ui::Menu *ui;
-    ConnectWindow     *connectWindow;
+    ConnectWindow *connectWindow;
 
 private slots:
         void on_playButton_clicked();

@@ -23,16 +23,44 @@ int main(int argc, char *argv[]){
      matrix->addIndex("o", 2, 3);
      matrix->addIndex("l", 3, 3);
      matrix->display();
-     matrix->checkPlay();*/
+     matrix->checkPlay();
 
     ASync* async = new ASync();
-    async->aSyncFunction();
+    async->thread();
+    string userInput1;
+    string userInput2;
+    string userInput3;
+    Matrix* matrix = Matrix::getInstance();
+    Holder* holder = Holder::getInstance();
 
-    /*QApplication a(argc, argv);
+
+    while (true){
+        cout << "> ";
+        getline(cin, userInput1);
+        if (userInput1 == "ins"){
+            while (true){
+                cout << "> ";
+                getline(cin, userInput1);
+                cout << "> ";
+                getline(cin, userInput2);
+                cout << "> ";
+                getline(cin, userInput3);
+                if (userInput1 == "fin") {
+                    break;
+                }
+                matrix->addIndex(userInput1, stoi(userInput2), stoi(userInput3));
+                holder->lastPlayList = LastPlayList::getInstance();
+            }
+        }
+
+    }
+    */
+
+    QApplication a(argc, argv);
         Menu w;
         w.show();
 
         return a.exec();
-*/
+
 }
 
