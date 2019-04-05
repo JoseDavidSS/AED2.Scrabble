@@ -3,13 +3,11 @@
 
 ConnectWindow::ConnectWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::ConnectWindow)
-{
+    ui(new Ui::ConnectWindow) {
     ui->setupUi(this);
 }
 
-ConnectWindow::~ConnectWindow()
-{
+ConnectWindow::~ConnectWindow() {
     delete ui;
 }
 
@@ -18,8 +16,7 @@ void ConnectWindow::toBoard() {
     board->show();
 }
 
-void ConnectWindow::changeEvent(QEvent *e)
-{
+void ConnectWindow::changeEvent(QEvent *e) {
     QMainWindow::changeEvent(e);
     switch (e->type()) {
     case QEvent::LanguageChange:
@@ -28,10 +25,6 @@ void ConnectWindow::changeEvent(QEvent *e)
     default:
         break;
     }
-}
-
-void ConnectWindow::on_playButton_clicked() {
-    close();
 }
 
 void ConnectWindow::on_hostButton_clicked() {

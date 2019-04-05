@@ -4,10 +4,10 @@
 
 #include "draggablerectitem.h"
 
-DraggableRectItem::DraggableRectItem(QGraphicsItem* parent):
+DraggableRectItem::DraggableRectItem(QGraphicsRectItem* parent):
         QGraphicsRectItem(parent), m_dragged(false) {
-    setFlags(QGraphicsItem::ItemIsSelectable|
-             QGraphicsItem::ItemIsMovable);
+    setFlags(QGraphicsRectItem::ItemIsSelectable|
+             QGraphicsRectItem::ItemIsMovable);
 }
 
 void DraggableRectItem::setAnchorPoint(const QPointF &anchorPoint) {

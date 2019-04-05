@@ -12,7 +12,9 @@
 class DraggableRectItem : public QGraphicsRectItem {
 
 public:
-    DraggableRectItem(QGraphicsItem* parent = 0);
+    QPointF anchorPoint;
+    QString letter;
+    DraggableRectItem(QGraphicsRectItem* parent = 0);
     void setAnchorPoint(const QPointF& anchorPoint);
 
 protected:
@@ -20,7 +22,6 @@ protected:
     void mouseReleaseEvent(QGraphicsSceneMouseEvent *event);
 
 private:
-    QPointF anchorPoint;
     bool m_dragged;
 };
 

@@ -68,9 +68,9 @@
    <widget class="QLabel" name="pointsLabel">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>50</y>
-      <width>61</width>
+      <x>630</x>
+      <y>410</y>
+      <width>111</width>
       <height>19</height>
      </rect>
     </property>
@@ -102,6 +102,19 @@
     </property>
     <property name="text">
      <string>Expert</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="roomLabel">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>30</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Room Number:</string>
     </property>
    </widget>
   </widget>

@@ -8,8 +8,7 @@ namespace Ui {
 class ConnectWindow;
 }
 
-class ConnectWindow : public QMainWindow
-{
+class ConnectWindow : public QMainWindow {
     Q_OBJECT
 
 public:
@@ -27,7 +26,6 @@ private:
     Board *board;
 
 private slots:
-    void on_playButton_clicked();
     void on_hostButton_clicked();
     void on_joinButton_clicked();
 };
