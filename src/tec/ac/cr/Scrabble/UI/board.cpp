@@ -4,12 +4,14 @@
 #include "../Logic/Lists/Matrix/Matrix.h"
 #include "../Logic/Lists/Matrix/List.h"
 #include "../Server/ASync.h"
+#include "draggablerectitem.h"
 
 #include <QGraphicsScene>
 #include <QGraphicsRectItem>
-#include "draggablerectitem.h"
+#include <QMediaPlaylist>
 #include <QStyleOptionGraphicsItem>
 #include <QVector>
+#include <QDir>
 #include <iostream>
 
 using namespace std;
@@ -40,6 +42,15 @@ Board::Board(QWidget *parent) :
         isOnline = false;
     }
     initializeBoard(isOnline);
+
+    // Plays music.
+    QMediaPlaylist *playlist = new QMediaPlaylist();
+    playlist->addMedia(QUrl("qrc:/noir.mp3"));
+    playlist->setPlaybackMode(QMediaPlaylist::Loop);
+
+    QMediaPlayer* background_music = new QMediaPlayer();
+    background_music->setMedia(playlist);
+    background_music->play();
 }
 
 /// Adds letter to matrix in specific id from 0 to 225.
@@ -98,6 +109,7 @@ void Board::initializeBoard(bool isOnline){
         }
         for (int i = 0; i < 15; i++) {
             QGraphicsRectItem *item = new QGraphicsRectItem(rect);
+            item->setPen(Qt::NoPen);
             allSquares.append(item);
             scene->addItem(item);
             item->setPos(xpos, ypos);
