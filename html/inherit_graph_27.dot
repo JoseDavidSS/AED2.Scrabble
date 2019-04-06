@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="GenericReader\< SourceEncoding,\l TargetEncoding, StackAllocator \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGenericReader.html",tooltip="SAX-style JSON parser. Use Reader for UTF8 encoding and default allocator. "];
+}

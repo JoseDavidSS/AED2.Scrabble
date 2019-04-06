@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="internal::StreamLocalCopy\l\< Stream, 0 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classinternal_1_1StreamLocalCopy_3_01Stream_00_010_01_4.html",tooltip="Keep reference. "];
+}

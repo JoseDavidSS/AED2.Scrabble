@@ -1,0 +1,8 @@
+digraph "internal::IsGenericValueImpl&lt; T, typename Void&lt; typename T::EncodingType &gt;::Type, typename Void&lt; typename T::AllocatorType &gt;::Type &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="internal::IsGenericValue\lImpl\< T, typename Void\l\< typename T::EncodingType\l \>::Type, typename Void\< typename\l T::AllocatorType \>::Type \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="IsBaseOf\< GenericValue\l\< T::EncodingType, T::\lAllocatorType \>, T \>::Type",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

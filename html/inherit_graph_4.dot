@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="AutoUTFOutputStream\l\< CharType, OutputByteStream \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAutoUTFOutputStream.html",tooltip="Output stream wrapper with dynamically bound encoding and automatic encoding detection. "];
+}

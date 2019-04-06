@@ -1,0 +1,13 @@
+digraph "src/tec/ac/cr/Scrabble/Logic/rapidjson/reader.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node22 [label="src/tec/ac/cr/Scrabble\l/Logic/rapidjson/reader.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node22 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="src/tec/ac/cr/Scrabble\l/Logic/rapidjson/document.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$document_8h.html"];
+  Node23 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="src/tec/ac/cr/Scrabble\l/Logic/rapidjson/pointer.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pointer_8h_source.html"];
+  Node24 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="src/tec/ac/cr/Scrabble\l/Logic/rapidjson/schema.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$schema_8h_source.html"];
+  Node23 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

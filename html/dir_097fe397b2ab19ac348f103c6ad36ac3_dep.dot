@@ -1,0 +1,18 @@
+digraph "src/tec/ac/cr/Scrabble/Logic/Lists" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_4c14075f81eb290628003691a9b92d90 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Logic" fontname="Helvetica", fontsize="10", URL="dir_4c14075f81eb290628003691a9b92d90.html"]
+  subgraph clusterdir_097fe397b2ab19ac348f103c6ad36ac3 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_097fe397b2ab19ac348f103c6ad36ac3.html"];
+    dir_097fe397b2ab19ac348f103c6ad36ac3 [shape=plaintext label="Lists"];
+    dir_902808e70300cb37a684ed25c45b78c6 [shape=box label="Dictionary" color="black" fillcolor="white" style="filled" URL="dir_902808e70300cb37a684ed25c45b78c6.html"];
+    dir_bcedbac1e49a282963fba4d40ee7cc4d [shape=box label="Letters" color="black" fillcolor="white" style="filled" URL="dir_bcedbac1e49a282963fba4d40ee7cc4d.html"];
+    dir_53a7751b72ebd9b05a41561d48d7f8d3 [shape=box label="Matrix" color="black" fillcolor="white" style="filled" URL="dir_53a7751b72ebd9b05a41561d48d7f8d3.html"];
+  }
+  }
+  dir_345fdfa6bc59cf4cab7c21f4168fca80 [shape=box label="rapidjson" fillcolor="white" style="filled" color="red" URL="dir_345fdfa6bc59cf4cab7c21f4168fca80.html"];
+  dir_53a7751b72ebd9b05a41561d48d7f8d3->dir_345fdfa6bc59cf4cab7c21f4168fca80 [headlabel="2", labeldistance=1.5 headhref="dir_000010_000011.html"];
+  dir_bcedbac1e49a282963fba4d40ee7cc4d->dir_345fdfa6bc59cf4cab7c21f4168fca80 [headlabel="2", labeldistance=1.5 headhref="dir_000009_000011.html"];
+}

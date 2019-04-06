@@ -1,0 +1,30 @@
+digraph "GenericDocument&lt; Encoding, Allocator, StackAllocator &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="GenericDocument\< Encoding,\l Allocator, StackAllocator \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GenericValue\< Encoding,\l Allocator \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGenericValue.html",tooltip="Represents a JSON value. Use Value for UTF8 encoding and default allocator. "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data_" ,fontname="Helvetica"];
+  Node4 [label="GenericValue\< Encoding,\l Allocator \>::Data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$unionGenericValue_1_1Data.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" s" ,fontname="Helvetica"];
+  Node5 [label="GenericValue\< Encoding,\l Allocator \>::String",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structGenericValue_1_1String.html"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" a" ,fontname="Helvetica"];
+  Node6 [label="GenericValue\< Encoding,\l Allocator \>::ArrayData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structGenericValue_1_1ArrayData.html"];
+  Node3 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" o" ,fontname="Helvetica"];
+  Node7 [label="GenericValue\< Encoding,\l Allocator \>::ObjectData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structGenericValue_1_1ObjectData.html"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" members" ,fontname="Helvetica"];
+  Node8 [label="GenericMember\< Encoding,\l Allocator \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structGenericMember.html",tooltip="Name-value pair in a JSON object value. "];
+  Node9 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" n" ,fontname="Helvetica"];
+  Node9 [label="GenericValue\< Encoding,\l Allocator \>::Number",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$unionGenericValue_1_1Number.html"];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" u" ,fontname="Helvetica"];
+  Node10 [label="GenericValue\< Encoding,\l Allocator \>::Number::U",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structGenericValue_1_1Number_1_1U.html"];
+  Node11 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" i" ,fontname="Helvetica"];
+  Node11 [label="GenericValue\< Encoding,\l Allocator \>::Number::I",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structGenericValue_1_1Number_1_1I.html"];
+  Node12 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ss" ,fontname="Helvetica"];
+  Node12 [label="GenericValue\< Encoding,\l Allocator \>::ShortString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structGenericValue_1_1ShortString.html"];
+  Node13 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" f" ,fontname="Helvetica"];
+  Node13 [label="GenericValue\< Encoding,\l Allocator \>::Flag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structGenericValue_1_1Flag.html"];
+}

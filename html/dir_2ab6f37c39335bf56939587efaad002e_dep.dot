@@ -1,0 +1,11 @@
+digraph "src/tec/ac/cr/Scrabble/Logic/Data" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_4c14075f81eb290628003691a9b92d90 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Logic" fontname="Helvetica", fontsize="10", URL="dir_4c14075f81eb290628003691a9b92d90.html"]
+  dir_2ab6f37c39335bf56939587efaad002e [shape=box, label="Data", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_2ab6f37c39335bf56939587efaad002e.html"];
+  }
+  dir_345fdfa6bc59cf4cab7c21f4168fca80 [shape=box label="rapidjson" fillcolor="white" style="filled" color="red" URL="dir_345fdfa6bc59cf4cab7c21f4168fca80.html"];
+  dir_2ab6f37c39335bf56939587efaad002e->dir_345fdfa6bc59cf4cab7c21f4168fca80 [headlabel="1", labeldistance=1.5 headhref="dir_000006_000011.html"];
+}

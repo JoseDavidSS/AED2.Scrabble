@@ -1,0 +1,15 @@
+digraph "src/tec/ac/cr/Scrabble" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_b05ce02602fa745a0813da0835b2027e {
+    graph [ bgcolor="#ddddee", pencolor="black", label="cr" fontname="Helvetica", fontsize="10", URL="dir_b05ce02602fa745a0813da0835b2027e.html"]
+  subgraph clusterdir_7ed4e8aca8f68cf7112f9b31e1e5dac6 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_7ed4e8aca8f68cf7112f9b31e1e5dac6.html"];
+    dir_7ed4e8aca8f68cf7112f9b31e1e5dac6 [shape=plaintext label="Scrabble"];
+    dir_4c14075f81eb290628003691a9b92d90 [shape=box label="Logic" color="red" fillcolor="white" style="filled" URL="dir_4c14075f81eb290628003691a9b92d90.html"];
+    dir_bbd6f4cf564e7e357099d4916fef3aa9 [shape=box label="Server" color="black" fillcolor="white" style="filled" URL="dir_bbd6f4cf564e7e357099d4916fef3aa9.html"];
+    dir_e2dae35c751ef00b6c3b26f3eff79c35 [shape=box label="UI" color="black" fillcolor="white" style="filled" URL="dir_e2dae35c751ef00b6c3b26f3eff79c35.html"];
+  }
+  }
+}

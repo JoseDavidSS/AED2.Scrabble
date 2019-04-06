@@ -1,0 +1,11 @@
+digraph "src/tec/ac/cr/Scrabble/Logic/rapidjson/document.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node27 [label="src/tec/ac/cr/Scrabble\l/Logic/rapidjson/document.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node27 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="src/tec/ac/cr/Scrabble\l/Logic/rapidjson/pointer.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pointer_8h_source.html"];
+  Node28 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="src/tec/ac/cr/Scrabble\l/Logic/rapidjson/schema.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$schema_8h_source.html"];
+  Node27 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

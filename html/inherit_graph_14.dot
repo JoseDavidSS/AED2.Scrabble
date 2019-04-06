@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="EncodedInputStream\l\< UTF8\<\>, MemoryStream \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classEncodedInputStream_3_01UTF8_3_4_00_01MemoryStream_01_4.html",tooltip="Specialized for UTF8 MemoryStream. "];
+}
