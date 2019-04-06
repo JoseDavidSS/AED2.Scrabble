@@ -32,11 +32,10 @@ Board::Board(QWidget *parent) :
     initializeBoard();
 }
 
-/**
-* Adds letter to matrix in specific id from 0 to 225.
-* @param int id
-* @param string letter
-*/
+//! Adds letter to matrix in specific id from 0 to 225.
+//! \param id
+//! \param letter
+
 void Board::addLetterToMatrix(int id, string letter) {
     Matrix* board = Matrix::getInstance();
     QVector<int>* letterCoords = board->idToCoordinates(id);
@@ -49,11 +48,10 @@ void Board::addLetterToMatrix(int id, string letter) {
     cout << letter << endl;
 }
 
-/**
-* Assigns specific letter to draggable square.
-* @param DraggableRectItem dItem
-* @param QString letter
-*/
+//! Assigns specific letter to draggable square.
+//! \param dItem
+//! \param letter
+
 void Board::assignLetter(DraggableRectItem* dItem, QString letter) {
     QString dir = "://letters/" + letter + ".png";
     QPixmap pixmap = QPixmap(dir);
@@ -68,18 +66,17 @@ void Board::assignLetter(QGraphicsRectItem* dItem, QString letter) {
     dItem->setBrush(QBrush(scaled));
 }
 
-/**
-* Blocks the ability to place letter in board.
-* @param bool state
-*/
+//! Blocks the ability to place letter in board.
+//! \param state
+
 void Board::blockPlay(bool state) {
     for (int i = 0; i < 225; i ++) {
         allSquares[i]->setAcceptDrops(state);
     }
 }
-/**
-* Initializes board with all of its starting default attributes.
-*/
+
+//! Initializes board with all of its starting default attributes.
+
 void Board::initializeBoard(){
     QRectF rect(0,0,30,30);
     double xpos = 0.5;
@@ -136,10 +133,8 @@ void Board::on_nextButton_clicked() {
     writeMatrix();
 }
 
-/**
-* Replaces draggable letters with new letter list.
-* @param
-*/
+//! Replaces draggable letters with new letter list.
+
 void Board::replaceLetters(LetterList* letterList) {
     LetterNode* tmp = letterList->head;
     int i = 0;
@@ -153,9 +148,8 @@ void Board::replaceLetters(LetterList* letterList) {
     }
 }
 
-/**
-* Sends letters to their original anchor points if play is not valid.
-*/
+//! Sends letters to their original anchor points if play is not valid.
+
 void Board::resetLetters() {
     for (int i = 0; i < 8; i++) {
         DraggableRectItem* currentLetter = allLetters[i];
@@ -163,17 +157,16 @@ void Board::resetLetters() {
     }
 }
 
-/**
-* Modifies room number label in GUI.
-* @param int number
-*/
+//! Modifies room number label in GUI.
+//! \param number
+
 void Board::setRoom(int number) {
     ui->roomLabel->setText("Room: " + QString::number(number));
 }
 
-/**
-* Updates Matrix Singleton, current board in play, with new data. Blocks squares with letters on them.
-*/
+//! Updates Matrix Singleton, current board in play, with new data. Blocks squares with letters on them.
+//! \param board
+
 void Board::updateBoard(Matrix* board) {
     List* currentList = board->head;
     Node* tmp = board->head->getHead();
@@ -196,17 +189,14 @@ void Board::updateBoard(Matrix* board) {
         }
 }
 
-/**
-* Modifies points label in GUI.
-* @param int points
-*/
+//! * Modifies points label in GUI.
+//! \param points
 void Board::updatePoints(int points) {
     ui->pointsLabel->setText("Points: " + QString::number(points));
 }
 
-/**
-* Takes placed letters in GUI and writes contents to Matrix Singleton.
-*/
+//! Takes placed letters in GUI and writes contents to Matrix Singleton.
+
 void Board::writeMatrix() {
     cout << "method activted" << endl;
     for (int i = 0; i < 8; i++) {

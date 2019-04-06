@@ -11,10 +11,9 @@
 
 using namespace std;
 
-/**
- * Method that sends the holder instance to the server
- * @return the holder received from the server
- */
+//! Method that sends the holder instance to the server
+//! \return the holder received from the server
+
 Holder* ASync::toSend() {
     Holder* holder = Holder::getInstance();
     QJsonObject json;
@@ -23,10 +22,9 @@ Holder* ASync::toSend() {
     return client->run(json);
 }
 
-/**
- * Method that activates an async thread that will manage the communication between client and server
- * @return
- */
+//! Method that activates an async thread that will manage the communication between client and server
+//! \return
+
 Holder* ASync::thread() {
     future<Holder*> fn = async(launch::async, toSend);
     return fn.get();
