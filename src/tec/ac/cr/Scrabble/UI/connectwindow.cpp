@@ -31,8 +31,7 @@ void ConnectWindow::changeEvent(QEvent *e) {
 void ConnectWindow::on_hostButton_clicked() {
     holder->setPlayerName(ui->nameEntry->displayText().toStdString());
     holder->setPoints(ui->playerQuant->currentText().toInt());
-    ASync* async = new ASync();
-    Holder::setInstance(async->thread());
+    Holder::setInstance(ASync::thread());
     toBoard();
     hide();
 }
@@ -40,8 +39,7 @@ void ConnectWindow::on_hostButton_clicked() {
 void ConnectWindow::on_joinButton_clicked() {
     holder->setPlayerName(ui->nameEntry->displayText().toStdString());
     holder->setCodetoEnter(ui->roomEntry->displayText().toInt());
-    ASync* async = new ASync();
-    Holder::setInstance(async->thread());
+    Holder::setInstance(ASync::thread());
     toBoard();
     hide();
 }

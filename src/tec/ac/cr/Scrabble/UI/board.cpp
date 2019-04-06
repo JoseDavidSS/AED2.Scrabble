@@ -122,13 +122,12 @@ void Board::initializeBoard(){
 void Board::on_nextButton_clicked() {
     writeMatrix();
     Holder* holder = Holder::getInstance();
-    ASync* async = new ASync();
-    Holder::setInstance(async->thread());
+    Holder::setInstance(ASync::thread());
     holder = Holder::getInstance();
     if (holder->getValidatedPlay() == true) {
 
     } else {
-        //resetLetters();
+        resetLetters();
     }
 }
 

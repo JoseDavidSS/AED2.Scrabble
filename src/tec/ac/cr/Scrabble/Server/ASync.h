@@ -13,10 +13,12 @@ class ASync {
 
 public:
 
-    ASync() = default;
-
     static Holder* thread();
     static Holder* toSend();
+
+private:
+
+    ASync() = default;
 
 };
 
