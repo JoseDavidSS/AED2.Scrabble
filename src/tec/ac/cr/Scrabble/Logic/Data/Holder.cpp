@@ -59,6 +59,11 @@ void Holder::setCodetoEnter(int codeToEnter) {
     this->codeToEnter = codeToEnter;
 }
 
+/**
+ * Method to deserialize the Holder class
+ * @param json this is where the serialized instance will be
+ * @return the holder instance with the data
+ */
 Holder* Holder::read(const QJsonObject &json) {
     Holder* parsedHolder = new Holder();
     if (json.contains("turn") && json["turn"].isBool()){
@@ -95,6 +100,10 @@ Holder* Holder::read(const QJsonObject &json) {
     }
 }
 
+/**
+ * Method to serialize the holder class
+ * @param json where the instance will be serialized
+ */
 void Holder::write(QJsonObject &json) const {
     json["turn"] = turn;
     json["validatedPlay"] = validatedPlay;

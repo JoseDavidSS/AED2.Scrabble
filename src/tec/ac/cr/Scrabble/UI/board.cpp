@@ -126,7 +126,7 @@ void Board::on_nextButton_clicked() {
     Holder* holder = Holder::getInstance();
     holder->lastPlayList = LastPlayList::getInstance();
     ASync* async = new ASync();
-    Holder::setInstance(async->thread2());
+    Holder::setInstance(async->thread());
     holder = Holder::getInstance();
     if (holder->getValidatedPlay() == true) {
 

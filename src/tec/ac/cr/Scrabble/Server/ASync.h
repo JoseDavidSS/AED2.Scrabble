@@ -17,8 +17,6 @@ public:
 
     static Holder* thread();
     static Holder* toSend();
-    static Holder* thread2();
-    static Holder* toSend2();
 
 };
 
