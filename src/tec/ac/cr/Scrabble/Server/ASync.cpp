@@ -11,32 +11,23 @@
 
 using namespace std;
 
+/**
+ * Method that sends the holder instance to the server
+ * @return the holder received from the server
+ */
 Holder* ASync::toSend() {
     Holder* holder = Holder::getInstance();
-    holder->setPoints(2);
-    holder->setPlayerName("Kevin");
     QJsonObject json;
     holder->write(json);
     Client* client = Client::getInstance();
     return client->run(json);
 }
 
+/**
+ * Method that activates an async thread that will manage the communication between client and server
+ * @return
+ */
 Holder* ASync::thread() {
-    cout << "Main Thread: " << this_thread::get_id() << endl;
     future<Holder*> fn = async(launch::async, toSend);
-    return fn.get();
-}
-
-Holder* ASync::toSend2() {
-    Holder* holder = Holder::getInstance();
-    QJsonObject json;
-    holder->write(json);
-    Client* client = Client::getInstance();
-    return client->run(json);
-}
-
-Holder* ASync::thread2() {
-    cout << "Main Thread: " << this_thread::get_id() << endl;
-    future<Holder*> fn = async(launch::async, toSend2);
     return fn.get();
 }

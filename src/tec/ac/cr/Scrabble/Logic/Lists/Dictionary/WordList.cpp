@@ -27,6 +27,10 @@ void WordList::setLenght(int lenght) {
     this->lenght = lenght;
 }
 
+/**
+ * Method to add a Word to the list
+ * @param word as a string
+ */
 void WordList::addWord(string word) {
     if (this->head == nullptr) {
         this->head = new WordNode(word);
@@ -40,6 +44,7 @@ void WordList::addWord(string word) {
         this->lenght++;
     }
 }
+
 
 bool WordList::searchWord(string word) {
     ifstream fin;
@@ -78,6 +83,10 @@ bool WordList::searchWord(string word) {
     }
 }
 
+/**
+ * Method that checks if all the words in the list
+ * @return boolean to check if all the words inside the list exists or not
+ */
 bool WordList::checkWordsInList() {
     if (this->head == nullptr){
         return false;

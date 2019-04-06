@@ -27,6 +27,11 @@ Client* Client::getInstance() {
     return client;
 }
 
+/**
+ * Method that connects with the server
+ * @param json with the holder that will be sent
+ * @return a new holder instance with up to date data from the server
+ */
 Holder* Client::run(QJsonObject& json) {
     //	Create a socket
     int sock = socket(AF_INET, SOCK_STREAM, 0);
@@ -36,8 +41,8 @@ Holder* Client::run(QJsonObject& json) {
     }
 
     //	Create a hint structure for the server we're connecting with
-    int port = settingPort();
-    string ipAddress = settingIpAddress();
+    int port = 54000;
+    string ipAddress = "127.0.0.1";
 
     sockaddr_in hint;
     hint.sin_family = AF_INET;
@@ -55,8 +60,6 @@ Holder* Client::run(QJsonObject& json) {
     char buf[4096];
     string userInput;
     //		Enter lines of text
-    cout << "> ";
-    getline(cin, userInput);
 
     QJsonDocument doc(json);
     QByteArray ba = doc.toJson();
@@ -83,7 +86,7 @@ Holder* Client::run(QJsonObject& json) {
     {
         //		Display response
         str = string(buf, 0, bytesReceived);
-        cout << "SERVER> " << str << "\r\n";
+       // cout << "SERVER> " << str << "\r\n";
         QJsonDocument doc2 = QJsonDocument::fromJson(QByteArray(str.c_str()));
         json = doc2.object();
     }
@@ -94,6 +97,10 @@ Holder* Client::run(QJsonObject& json) {
     return Holder::read(json);
 }
 
+/**
+ * Method tha reads the port from the properties.text
+ * @return the port number
+ */
 int Client::settingPort() {
     ifstream fin;
     fin.open("/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/properties.text");
@@ -149,6 +156,10 @@ int Client::settingPort() {
     }
 }
 
+/**
+ * Method that reads the ip address from the properties.text
+ * @return the ip address
+ */
 string Client::settingIpAddress(){
     ifstream fin;
     fin.open("/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/properties.text");

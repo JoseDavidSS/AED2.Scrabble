@@ -29,6 +29,10 @@ void LastPlayNode::setColumn(int j) {
     this->column = j;
 }
 
+/**
+ * Method that deserializes a LastPlayNode from json
+ * @param json where the data is
+ */
 void LastPlayNode::read(const QJsonObject &json) {
     if (json.contains("letter") && json["letter"].isString()){
         letter = json["letter"].toString().toUtf8().constData();
@@ -39,6 +43,10 @@ void LastPlayNode::read(const QJsonObject &json) {
     }
 }
 
+/**
+ * Method that serializes a LastPlayNode to json
+ * @param json where the data will be
+ */
 void LastPlayNode::write(QJsonObject &json) const {
     json["letter"] = QString::fromStdString(letter);
     json["row"] = row;

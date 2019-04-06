@@ -216,6 +216,10 @@ void Matrix::initialize() {
     }
 }
 
+/**
+ * Method that checks if all the letters that where put in the matrix in the last turn are all in the same row or column
+ * @return a boolean indicating if either they are or not
+ */
 bool Matrix::checkPlay() {
     if (preLastPlayColumn == 0 && preLastPlayRow == 0){
         this->searchWords(lastPlayRow, lastPlayColumn);
@@ -237,6 +241,11 @@ bool Matrix::checkPlay() {
 
 }
 
+/**
+ * Method that searchs the words that where formed in the last turn
+ * @param row where the letter is
+ * @param column where the letter is
+ */
 void Matrix::searchWords(int row, int column) {
     string word;
     WordList* wordList = WordList::getInstance();

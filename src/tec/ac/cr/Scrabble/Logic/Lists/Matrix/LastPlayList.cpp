@@ -24,6 +24,12 @@ void LastPlayList::setLenght(int lenght) {
     this->lenght = lenght;
 }
 
+/**
+ * Method that adds a play to the list
+ * @param letter that will be added
+ * @param row where the letter was added
+ * @param column where the letter was added
+ */
 void LastPlayList::addPlay(string letter, int row, int column) {
     if (this->head == nullptr){
         this->head = new LastPlayNode(letter, row, column);
@@ -38,6 +44,12 @@ void LastPlayList::addPlay(string letter, int row, int column) {
     }
 }
 
+/**
+ * Method that deletes a play from the list
+ * @param letter that will be deleted
+ * @param row where the letter is
+ * @param column where the letter is
+ */
 void LastPlayList::deletePlay(string letter, int row, int column) {
     if (this->head == nullptr){
         cout << "Nada que borrar" << endl;
@@ -56,6 +68,12 @@ void LastPlayList::deletePlay(string letter, int row, int column) {
     }
 }
 
+/**
+ * Method that deserializes a json to a LastPlayList
+ * @param json that has the list data
+ * @param nodesArray that has all the nodes information of the list
+ * @return LastPlayList that has all the data deserialized
+ */
 LastPlayList* LastPlayList::read(const QJsonObject& json, const QJsonArray& nodesArray) {
     LastPlayList* parsedList = new LastPlayList();
     if (!nodesArray.isEmpty()){
@@ -72,6 +90,12 @@ LastPlayList* LastPlayList::read(const QJsonObject& json, const QJsonArray& node
     }
 }
 
+/**
+ * Method that serializes a LastPlayList
+ * @param json where the list will be serialized
+ * @param nodesArray that will have all the list data
+ * @return an array with all the data
+ */
 QJsonArray& LastPlayList::write(QJsonObject &json, QJsonArray& nodesArray) const {
     if (this->head == nullptr){
         return nodesArray;

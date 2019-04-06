@@ -26,7 +26,7 @@ int main(int argc, char *argv[]){
      matrix->checkPlay();
 
     ASync* async = new ASync();
-    async->thread();
+    Holder::setInstance(async->thread());
     string userInput1;
     string userInput2;
     string userInput3;
@@ -46,6 +46,7 @@ int main(int argc, char *argv[]){
                 cout << "> ";
                 getline(cin, userInput3);
                 if (userInput1 == "fin") {
+                    Holder::setInstance(async->thread2());
                     break;
                 }
                 matrix->addIndex(userInput1, stoi(userInput2), stoi(userInput3));
