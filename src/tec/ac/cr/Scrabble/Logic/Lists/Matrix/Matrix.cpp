@@ -6,6 +6,7 @@
 #include "LastPlayList.h"
 #include "../Dictionary/WordList.h"
 #include <unordered_set>
+#include <QVector>
 
 Matrix* Matrix::matrix = nullptr;
 
@@ -20,6 +21,10 @@ Matrix* Matrix::getInstance() {
         matrix->assignMultipliers();
     }
     return matrix;
+}
+
+void Matrix::setInstance(Matrix* nmatrix) {
+    matrix = nmatrix;
 }
 
 int Matrix::getLenght() {
@@ -108,6 +113,7 @@ void Matrix::addIndex(string letter, int i, int j) {
     pos->setLetter(letter);
     LastPlayList* lastPlayList = LastPlayList::getInstance();
     lastPlayList->addPlay(letter, i, j);
+    LastPlayList::setInstance(lastPlayList);
     this->preLastPlayRow = this->lastPlayRow;
     this->preLastPlayColumn = this->lastPlayColumn;
     this->lastPlayRow = i;
@@ -162,6 +168,24 @@ void Matrix::display() {
         tmp->display();
         tmp = tmp->next;
     }
+}
+
+QVector<int>* Matrix::idToCoordinates(int id) {
+    int row = 0;
+    int column = -1;
+    QVector<int>* result = new QVector<int>;
+
+    while (id != 0) {
+        if (column == 14) {
+            row ++;
+            column = -1;
+        }
+        column++;
+        id --;
+    }
+    result->append(row);
+    result->append(column);
+    return result;
 }
 
 /**

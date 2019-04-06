@@ -3,6 +3,7 @@
 #include "../Logic/Data/Holder.h"
 #include "../Logic/Lists/Matrix/Matrix.h"
 #include "../Logic/Lists/Matrix/List.h"
+#include "../Server/ASync.h"
 
 #include <QGraphicsScene>
 #include <QGraphicsRectItem>
@@ -18,13 +19,6 @@ Board::Board(QWidget *parent) :
 
     ui->setupUi(this);
 
-    // Test Matrix
-    Matrix* m = Matrix::getInstance();
-    m->addIndex("A", 2, 7);
-    m->addIndex("Y", 2, 3);
-    m->addIndex("Q", 1, 3);
-
-
     int width = 800;
     int height = 600;
 
@@ -36,7 +30,6 @@ Board::Board(QWidget *parent) :
     view->setStyleSheet("background: transparent");
 
     initializeBoard();
-    updateBoard(m);
 }
 
 /**
@@ -46,20 +39,14 @@ Board::Board(QWidget *parent) :
 */
 void Board::addLetterToMatrix(int id, string letter) {
     Matrix* board = Matrix::getInstance();
-    List* currentList = board->head;
-    Node* tmp = board->head->getHead();
-    while (currentList != nullptr) {
-            while (tmp != nullptr) {
-                if (tmp->getID() == id) {
-                    tmp->setLetter(letter);
-                }
-                tmp = tmp->next;
-            }
-            currentList = currentList->next;
-            if (currentList != nullptr) {
-                tmp = currentList->getHead();
-            }
-        }
+    QVector<int>* letterCoords = board->idToCoordinates(id);
+    int i = letterCoords->at(0);
+    int j = letterCoords->at(1);
+    board->addIndex(letter, i, j);
+    Matrix::setInstance(board);
+    cout << letterCoords->at(0) << endl;
+    cout << letterCoords->at(1) << endl;
+    cout << letter << endl;
 }
 
 /**
@@ -97,14 +84,10 @@ void Board::initializeBoard(){
     QRectF rect(0,0,30,30);
     double xpos = 0.5;
     double ypos = 0;
-    //TEMP
-    QVector<QString> LetterList;
-    LetterList.append("A");
-    LetterList.append("C");
-    LetterList.append("F");
-    LetterList.append("E");
-    LetterList.append("P");
-    LetterList.append("O");
+
+    holder = Holder::getInstance();
+    setRoom(holder->getCodeToEnter());
+
 
     for(int i = 0; i < 15; i++) {
         for (int i = 0; i < 15; i++) {
@@ -122,7 +105,7 @@ void Board::initializeBoard(){
     ypos = 100;
 
     for(int i = 0; i < 2; i++) {
-        for(int i = 0; i < 3; i++) {
+        for(int i = 0; i < 4; i++) {
             DraggableRectItem* dItem = new DraggableRectItem();
             allLetters.append(dItem);
             scene->addItem(dItem);
@@ -135,17 +118,21 @@ void Board::initializeBoard(){
         xpos = 600;
         ypos += 50;
     }
-    replaceLetters(LetterList);
+    LetterList* letters = holder->letterList;
+    replaceLetters(letters);
 }
 
 void Board::on_nextButton_clicked() {
-    //Holder* holder = Holder::getInstance();
-    //if (holder->getValidatedPlay() == true) {
+    Holder* holder = Holder::getInstance();
+    holder->lastPlayList = LastPlayList::getInstance();
+    ASync* async = new ASync();
+    Holder::setInstance(async->thread2());
+    holder = Holder::getInstance();
+    if (holder->getValidatedPlay() == true) {
 
-    //} else {
-        //resetLetters()
-        //}
-    //}
+    } else {
+        //resetLetters();
+    }
     writeMatrix();
 }
 
@@ -153,12 +140,16 @@ void Board::on_nextButton_clicked() {
 * Replaces draggable letters with new letter list.
 * @param
 */
-void Board::replaceLetters(QVector<QString> LetterList) {
-    for (int i = 0; i < 6; i++) {
-        QString letterToAssign = LetterList[i];
+void Board::replaceLetters(LetterList* letterList) {
+    LetterNode* tmp = letterList->head;
+    int i = 0;
+    while (tmp != nullptr) {
+        QString letterToAssign = QString::fromStdString(tmp->getLetter());
         DraggableRectItem* currentLetter = allLetters[i];
         currentLetter->letter = letterToAssign;
         assignLetter(currentLetter, letterToAssign);
+        tmp = tmp->next;
+        i++;
     }
 }
 
@@ -166,7 +157,7 @@ void Board::replaceLetters(QVector<QString> LetterList) {
 * Sends letters to their original anchor points if play is not valid.
 */
 void Board::resetLetters() {
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 8; i++) {
         DraggableRectItem* currentLetter = allLetters[i];
         currentLetter->setPos(currentLetter->anchorPoint);
     }
@@ -217,18 +208,21 @@ void Board::updatePoints(int points) {
 * Takes placed letters in GUI and writes contents to Matrix Singleton.
 */
 void Board::writeMatrix() {
-    for (int i = 0; i < 6; i++) {
+    cout << "method activted" << endl;
+    for (int i = 0; i < 8; i++) {
         DraggableRectItem* currentLetter = allLetters[i];
+        QPointF letterPos = currentLetter->pos();
         for (int j = 0; j < 225; j++) {
             QGraphicsRectItem* item = allSquares[j];
             QPointF itemPos = item->pos();
-            if (itemPos == currentLetter->pos()) {
+            if (itemPos == letterPos) {
                 QString toAssign = currentLetter->letter;
                 string convertedLetter = toAssign.toStdString();
                 addLetterToMatrix(j + 1, convertedLetter);
             }
         }
     }
+    resetLetters();
 }
 
 Board::~Board()

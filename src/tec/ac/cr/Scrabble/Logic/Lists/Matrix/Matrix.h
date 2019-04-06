@@ -10,6 +10,7 @@
 #include "List.h"
 #include <sstream>
 #include <string>
+#include <QVector>
 
 class Matrix {
 
@@ -23,6 +24,7 @@ public:
     List* head = nullptr;
 
     static Matrix* getInstance();
+    static void setInstance(Matrix* nmatrix);
     int getLenght();
     void setLenght(int lenght);
     int getRows();
@@ -43,6 +45,7 @@ public:
     void display();
     Node* index(int i, int j);
     void initialize();
+    QVector<int>* idToCoordinates(int id);
     bool checkPlay();
     void searchWords(int row, int column);
 

@@ -36,8 +36,8 @@ Holder* Client::run(QJsonObject& json) {
     }
 
     //	Create a hint structure for the server we're connecting with
-    int port = settingPort();
-    string ipAddress = settingIpAddress();
+    int port = 54000;
+    string ipAddress = "127.0.0.1";
 
     sockaddr_in hint;
     hint.sin_family = AF_INET;
@@ -56,7 +56,7 @@ Holder* Client::run(QJsonObject& json) {
     string userInput;
     //		Enter lines of text
     cout << "> ";
-    getline(cin, userInput);
+    //getline(cin, userInput);
 
     QJsonDocument doc(json);
     QByteArray ba = doc.toJson();
@@ -83,7 +83,7 @@ Holder* Client::run(QJsonObject& json) {
     {
         //		Display response
         str = string(buf, 0, bytesReceived);
-        cout << "SERVER> " << str << "\r\n";
+        //cout << "SERVER> " << str << "\r\n";
         QJsonDocument doc2 = QJsonDocument::fromJson(QByteArray(str.c_str()));
         json = doc2.object();
     }

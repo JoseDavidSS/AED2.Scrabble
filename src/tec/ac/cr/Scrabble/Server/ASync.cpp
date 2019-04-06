@@ -13,8 +13,6 @@ using namespace std;
 
 Holder* ASync::toSend() {
     Holder* holder = Holder::getInstance();
-    holder->setPoints(2);
-    holder->setPlayerName("Kevin");
     QJsonObject json;
     holder->write(json);
     Client* client = Client::getInstance();

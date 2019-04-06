@@ -93,7 +93,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="roomEntry">
     <property name="geometry">
      <rect>
       <x>460</x>
@@ -122,7 +122,7 @@ font-size: 20pt</string>
      <string>IP TO CONNECT TO</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="nameEntry">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -150,6 +150,31 @@ font-size: 20pt</string>
     <property name="placeholderText">
      <string>IP TO CONNECT TO</string>
     </property>
+   </widget>
+   <widget class="QComboBox" name="playerQuant">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>260</y>
+      <width>79</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4</string>
+     </property>
+    </item>
    </widget>
   </widget>
  </widget>

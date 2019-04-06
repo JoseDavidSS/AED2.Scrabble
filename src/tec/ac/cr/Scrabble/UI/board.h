@@ -8,6 +8,7 @@
 #include "customrectitem.h"
 #include "draggablerectitem.h"
 #include "../Logic/Lists/Matrix/Matrix.h"
+#include "../Logic/Data/Holder.h"
 
 namespace Ui {
 class Board;
@@ -20,12 +21,13 @@ class Board : public QMainWindow
 public:
     explicit Board(QWidget *parent = nullptr);
     ~Board();
+    Holder* holder = Holder::getInstance();
     void addLetterToMatrix(int id, string letter);
     void assignLetter(DraggableRectItem* dItem, QString letter);
     void assignLetter(QGraphicsRectItem* dItem, QString letter);
     void blockPlay(bool state);
     void initializeBoard();
-    void replaceLetters(QVector<QString>);
+    void replaceLetters(LetterList* letterlist);
     void resetLetters();
     void setRoom(int number);
     void updateBoard(Matrix* board);

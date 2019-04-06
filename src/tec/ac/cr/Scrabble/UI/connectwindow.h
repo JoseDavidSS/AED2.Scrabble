@@ -14,6 +14,7 @@ class ConnectWindow : public QMainWindow {
 public:
     explicit ConnectWindow(QWidget *parent = nullptr);
     ~ConnectWindow();
+    Holder* holder = Holder::getInstance();
 
 public slots:
        void toBoard();
