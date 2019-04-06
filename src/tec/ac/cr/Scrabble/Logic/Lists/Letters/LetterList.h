@@ -14,6 +14,8 @@ using namespace rapidjson;
 class LetterList {
 
 public:
+    LetterList() = default;
+    LetterList(LetterList const&) = default;
 
     static LetterList* getInstance();
 
@@ -30,9 +32,6 @@ public:
     QJsonArray& write(QJsonObject& json, QJsonArray& nodesArray) const;
 
 private:
-
-    LetterList() = default;
-    LetterList(LetterList const&) = default;
     LetterList& operator = (LetterList const&) = default;
 
     static LetterList* letterList;

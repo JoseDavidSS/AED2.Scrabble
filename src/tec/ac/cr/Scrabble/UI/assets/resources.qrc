@@ -38,5 +38,13 @@
         <file>letters/Ll.png</file>
         <file>letters/Ch.png</file>
         <file>letters/.png</file>
+        <file>border_background.png</file>
+        <file>resetButtonIcon.png</file>
+        <file>expertButtonIcon.png</file>
+        <file>nextButtonIcon.png</file>
+        <file>clack.mp3</file>
+        <file>noir.mp3</file>
+        <file>roundLeather.png</file>
+        <file>fireplace.gif</file>
     </qresource>
 </RCC>

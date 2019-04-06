@@ -10,8 +10,7 @@ Scene::Scene(QObject *parent) :
     Q_ASSERT(gridSize > 0);
 }
 
-void Scene::drawBackground(QPainter *painter, const QRectF &rect)
-{
+void Scene::drawBackground(QPainter *painter, const QRectF &rect) {
     QPen pen;
     painter->setPen(pen);
 

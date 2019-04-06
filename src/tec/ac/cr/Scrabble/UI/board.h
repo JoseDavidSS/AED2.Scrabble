@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QGraphicsView>
 #include <QLabel>
+#include <QMediaPlayer>
 #include "scene.h"
 #include "customrectitem.h"
 #include "draggablerectitem.h"
@@ -25,7 +26,7 @@ public:
     void assignLetter(DraggableRectItem* dItem, QString letter);
     void assignLetter(QGraphicsRectItem* dItem, QString letter);
     void blockPlay(bool state);
-    void initializeBoard();
+    void initializeBoard(bool isOnline);
     void replaceLetters(LetterList* letterlist);
     void resetLetters();
     void setRoom(int number);
@@ -39,9 +40,11 @@ private:
     QGraphicsScene* scene;
     QVector<QGraphicsRectItem*> allSquares;
     QVector<DraggableRectItem*> allLetters;
+    QMediaPlayer* music = new QMediaPlayer();
 
 private slots:
     void on_nextButton_clicked();
+    void on_resetButton_clicked();
 
 };
 
