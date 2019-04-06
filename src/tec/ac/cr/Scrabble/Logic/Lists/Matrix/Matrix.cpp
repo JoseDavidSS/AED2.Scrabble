@@ -120,6 +120,9 @@ void Matrix::addIndex(string letter, int i, int j) {
     this->lastPlayColumn = j;
 }
 
+/**
+* Deletes letter in a specific row and column.
+*/
 void Matrix::deleteIndex(string letter, int i, int j) {
     Node* pos = index(i, j);
     pos->setLetter("");
@@ -170,6 +173,10 @@ void Matrix::display() {
     }
 }
 
+/**
+* Converts letter id to coordinates x and y in matrix.
+* @param int id of position to delete
+*/
 QVector<int>* Matrix::idToCoordinates(int id) {
     int row = 0;
     int column = -1;
