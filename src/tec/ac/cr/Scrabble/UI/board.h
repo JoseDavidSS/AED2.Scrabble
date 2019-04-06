@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QGraphicsView>
 #include <QLabel>
+#include <QMediaPlayer>
 #include "scene.h"
 #include "customrectitem.h"
 #include "draggablerectitem.h"
@@ -39,6 +40,7 @@ private:
     QGraphicsScene* scene;
     QVector<QGraphicsRectItem*> allSquares;
     QVector<DraggableRectItem*> allLetters;
+    QMediaPlayer* music = new QMediaPlayer();
 
 private slots:
     void on_nextButton_clicked();

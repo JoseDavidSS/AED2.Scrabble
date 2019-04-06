@@ -44,5 +44,7 @@
         <file>nextButtonIcon.png</file>
         <file>clack.mp3</file>
         <file>noir.mp3</file>
+        <file>roundLeather.png</file>
+        <file>fireplace.gif</file>
     </qresource>
 </RCC>

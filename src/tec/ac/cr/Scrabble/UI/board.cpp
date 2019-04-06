@@ -12,6 +12,7 @@
 #include <QStyleOptionGraphicsItem>
 #include <QVector>
 #include <QDir>
+#include <QMovie>
 #include <iostream>
 
 using namespace std;
@@ -32,6 +33,12 @@ Board::Board(QWidget *parent) :
     view->setScene(scene);
     view->setFixedSize(width, height);
     view->setStyleSheet("background: transparent");
+    QMovie* movie = new QMovie("qrc:/fireplace.gif");
+    ui->fireplace->setMovie(movie);
+    movie->start();
+    ui->fireplace->show();
+    ui->fireplace->raise();
+
 
     // Checks if connection with server is established for offline tests if necessary.
     Holder* holder = Holder::getInstance();
@@ -126,7 +133,7 @@ void Board::initializeBoard(bool isOnline){
     }
 
     xpos = 650;
-    ypos = 100;
+    ypos = 90;
 
     for(int i = 0; i < 4; i++) {
         for(int i = 0; i < 2; i++) {
@@ -140,7 +147,7 @@ void Board::initializeBoard(bool isOnline){
             dItem->setAnchorPoint(dItem->pos());
         }
         xpos = 650;
-        ypos += 50;
+        ypos += 40;
     }
 
     Holder* holder = Holder::getInstance();
@@ -208,7 +215,7 @@ void Board::resetLetters() {
 /// Modifies room number label in GUI.
 /// @param number
 void Board::setRoom(int number) {
-    ui->roomLabel->setText("Room: " + QString::number(number));
+    ui->roomLabel->setText("Código de sala: " + QString::number(number));
 }
 
 /// Updates Matrix Singleton, current board in play, with new data. Blocks squares with letters on them.
@@ -238,7 +245,7 @@ void Board::updateBoard(Matrix* board) {
 /// Modifies points label in GUI.
 /// @param points
 void Board::updatePoints(int points) {
-    ui->pointsLabel->setText("Points: " + QString::number(points));
+    ui->pointsLabel->setText("Puntos: " + QString::number(points));
 }
 
 /// Takes placed letters in GUI and writes contents to Matrix Singleton.
