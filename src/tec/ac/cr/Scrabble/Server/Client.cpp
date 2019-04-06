@@ -28,11 +28,10 @@ Client* Client::getInstance() {
     return client;
 }
 
-/**
- * Method that connects with the server
- * @param json with the holder that will be sent
- * @return a new holder instance with up to date data from the server
- */
+//! Method that connects with the server
+//! \param json with the holder that will be sent
+//! \return a new holder instance with up to date data from the server
+
 Holder* Client::run(QJsonObject& json) {
     //	Create a socket
     int sock = socket(AF_INET, SOCK_STREAM, 0);
@@ -98,10 +97,9 @@ Holder* Client::run(QJsonObject& json) {
     return Holder::read(json);
 }
 
-/**
- * Method tha reads the port from the properties.text
- * @return the port number
- */
+//! Method reads the port from the properties.text
+//! \return the port number
+
 int Client::settingPort() {
     ifstream fin;
     fin.open("/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/properties.text");
@@ -157,10 +155,9 @@ int Client::settingPort() {
     }
 }
 
-/**
- * Method that reads the ip address from the properties.text
- * @return the ip address
- */
+//! Method that reads the ip address from the properties.text
+//! \return the ip address
+
 string Client::settingIpAddress(){
     ifstream fin;
     fin.open("/home/kevin/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Server/properties.text");
