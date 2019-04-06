@@ -30,10 +30,8 @@ int LetterNode::getCounters() {
     return this->counter;
 }
 
-/**
- * Method that deserializes a LetterNode, that haves letter information
- * @param json that have the serialized data
- */
+//! Method that deserializes a LastPlayNode from json
+//! \param json where the data is
 void LetterNode::read(const QJsonObject &json) {
     if (json.contains("letter") && json["letter"].isString()){
         letter = (json["letter"].toString().toUtf8().constData());
@@ -44,10 +42,8 @@ void LetterNode::read(const QJsonObject &json) {
     }
 }
 
-/**
- * Method that serializes a LetterNode
- * @param json that haves the serialized data
- */
+//! Method that serializes a LastPlayNode to json
+//! \param json where the data will be
 void LetterNode::write(QJsonObject &json) const {
     json["letter"] = QString::fromStdString(letter);
     json["point"] = point;

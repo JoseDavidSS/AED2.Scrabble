@@ -12,12 +12,9 @@ void List::setLenght(int lenght) {
     this->length = lenght;
 }
 
-/**
-* Add a new value to list.
-* @param n int to add
-* @param multiplier int specific multiplier of square. Default is 0 (no multiplier)
-* 0 = NO, 1 = DL, 2 = DW, 3 = TL, 4 = TW.
-*/
+//! Add a new value to list.
+//! \param id int to add
+//! \param multiplier int specific multiplier of square. Default is 0 (no multiplier)
 void List::add(int id, int multiplier) {
     Node* tmp = new Node;
     tmp->setLetter("");
@@ -47,9 +44,7 @@ void List::add(int id, int multiplier) {
     }
 }
 
-/**
- * Displays list as a string.
- */
+//! Displays list as a string
 void List::display() {
     string result = "[";
     Node* tmp = this->head;
@@ -68,11 +63,9 @@ void List::display() {
     return this->head;
 }
 
-/**
-* Finds the node with a specific index.
-* @param n position of value
-* @return *Node node in position n
-*/
+//! Finds the node with a specific index.
+//! \param n position of value
+//! \return *Node node in position n
 Node* List::index(int n) {
     Node *tmp = head;
     int i = 0;

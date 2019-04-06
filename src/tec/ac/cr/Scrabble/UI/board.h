@@ -21,7 +21,6 @@ class Board : public QMainWindow
 public:
     explicit Board(QWidget *parent = nullptr);
     ~Board();
-    Holder* holder = Holder::getInstance();
     void addLetterToMatrix(int id, string letter);
     void assignLetter(DraggableRectItem* dItem, QString letter);
     void assignLetter(QGraphicsRectItem* dItem, QString letter);

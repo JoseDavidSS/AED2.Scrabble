@@ -5,6 +5,7 @@
 #include "Matrix.h"
 #include "LastPlayList.h"
 #include "../Dictionary/WordList.h"
+#include "../../Data/Holder.h"
 #include <unordered_set>
 #include <QVector>
 
@@ -83,11 +84,8 @@ void Matrix::setPreLastPlayColumn(int column) {
     this->preLastPlayColumn = column;
 }
 
-/**
-* Add a new value to list.
-* @param n int to add
-* @param multiplier int specific multiplier of square. Default is 0 (no multiplier)
-*/
+//! Add a new value to list.
+//! \param list that will be added
 void Matrix::addRow(List* list) {
     if (this->head == nullptr) {
         this->head = list;
@@ -102,27 +100,27 @@ void Matrix::addRow(List* list) {
     }
 }
 
-/**
-* Adds a specific value in position.
-* @param letter string to add to position
-* @param i int of row
-* @param j int of column
-*/
+//! Adds a specific value in position.
+//! \param letter string to add to position
+//! \param i int of row
+//! \param j int of column
 void Matrix::addIndex(string letter, int i, int j) {
     Node* pos = index(i, j);
     pos->setLetter(letter);
     LastPlayList* lastPlayList = LastPlayList::getInstance();
     lastPlayList->addPlay(letter, i, j);
     LastPlayList::setInstance(lastPlayList);
+    Holder::getInstance()->lastPlayList = lastPlayList;
     this->preLastPlayRow = this->lastPlayRow;
     this->preLastPlayColumn = this->lastPlayColumn;
     this->lastPlayRow = i;
     this->lastPlayColumn = j;
 }
 
-/**
-* Deletes letter in a specific row and column.
-*/
+//! Method that deletes a letter from the matrix
+//! \param letter that will be deleted
+//! \param i row where the letter is
+//! \param j column where the letter is
 void Matrix::deleteIndex(string letter, int i, int j) {
     Node* pos = index(i, j);
     pos->setLetter("");
@@ -131,9 +129,7 @@ void Matrix::deleteIndex(string letter, int i, int j) {
 }
 
 
-/**
-* Assigns multipliers to nodes based on default Scrabble board.
-*/
+//! Assigns multipliers to nodes based on default Scrabble board.
 void Matrix::assignMultipliers() {
     List* currentList = this->head;
     Node* tmp = this->head->getHead();
@@ -162,9 +158,7 @@ void Matrix::assignMultipliers() {
     }
 }
 
-/**
- * Displays list as string.
- */
+//! Displays list as string.
 void Matrix::display() {
     List* tmp = this->head;
     while (tmp != nullptr) {
@@ -173,10 +167,9 @@ void Matrix::display() {
     }
 }
 
-/**
-* Converts letter id to coordinates x and y in matrix.
-* @param int id of position to delete
-*/
+//! Converts letter id to coordinates x and y in matrix.
+//! \param id int of position to delete
+//! \return
 QVector<int>* Matrix::idToCoordinates(int id) {
     int row = 0;
     int column = -1;
@@ -195,12 +188,10 @@ QVector<int>* Matrix::idToCoordinates(int id) {
     return result;
 }
 
-/**
-* Finds the node with a specific index.
-* @param i row
-* @param j column
-* @return *Node
-*/
+//! Finds the node with a specific index.
+//! \param i row
+//! \param j column
+//! \return *Node
 Node* Matrix::index(int i, int j) {
     List* tmp = head;
     int counter = 0;
@@ -212,9 +203,7 @@ Node* Matrix::index(int i, int j) {
     return result;
 }
 
-/**
-* Initializes empty 15x15 matrix with preset multipliers.
-*/
+//! Initializes empty 15x15 matrix with preset multipliers.
 void Matrix::initialize() {
     int rows = 15;
     int columns = 15;
@@ -247,10 +236,9 @@ void Matrix::initialize() {
     }
 }
 
-/**
- * Method that checks if all the letters that where put in the matrix in the last turn are all in the same row or column
- * @return a boolean indicating if either they are or not
- */
+//! Method that checks if all the letters that where put in the matrix in the last turn are all in the same row or column
+//! \param lastPlayList that has the last play
+//! \return a boolean indicating if either they are or not
 bool Matrix::checkPlay() {
     if (preLastPlayColumn == 0 && preLastPlayRow == 0){
         this->searchWords(lastPlayRow, lastPlayColumn);
@@ -272,11 +260,9 @@ bool Matrix::checkPlay() {
 
 }
 
-/**
- * Method that searchs the words that where formed in the last turn
- * @param row where the letter is
- * @param column where the letter is
- */
+//! Method that searchs the words that where formed in the last turn
+//! \param row where the letter is
+//! \param column where the letter is
 void Matrix::searchWords(int row, int column) {
     string word;
     WordList* wordList = WordList::getInstance();

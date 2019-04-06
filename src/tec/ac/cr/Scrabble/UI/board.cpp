@@ -85,7 +85,7 @@ void Board::initializeBoard(){
     double xpos = 0.5;
     double ypos = 0;
 
-    holder = Holder::getInstance();
+    Holder* holder = Holder::getInstance();
     setRoom(holder->getCodeToEnter());
 
 
@@ -123,8 +123,8 @@ void Board::initializeBoard(){
 }
 
 void Board::on_nextButton_clicked() {
+    writeMatrix();
     Holder* holder = Holder::getInstance();
-    holder->lastPlayList = LastPlayList::getInstance();
     ASync* async = new ASync();
     Holder::setInstance(async->thread());
     holder = Holder::getInstance();
@@ -133,7 +133,6 @@ void Board::on_nextButton_clicked() {
     } else {
         //resetLetters();
     }
-    writeMatrix();
 }
 
 /**

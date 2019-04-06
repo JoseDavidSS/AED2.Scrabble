@@ -20,9 +20,7 @@ LetterList* LetterList::getInstance() {
     return letterList;
 }
 
-/**
- * Method to add letters to the list
- */
+//! Method to add letters to the list
 void LetterList::letterSorter() {
     insertNode("A", 1, 12);
     insertNode("E", 1, 12);
@@ -63,12 +61,10 @@ void LetterList::setLenght(int lenght) {
     this->length = lenght;
 }
 
-/**
- * Method to add nodes to the list
- * @param letter that will be inserted to the list
- * @param points of the letter
- * @param counter of how many of that letter are
- */
+//! Method to add nodes to the list
+//! \param letter that will be inserted to the list
+//! \param points of the letter
+//! \param counter of how many of that letter are
 void LetterList::insertNode(string letter, int points, int counter) {
     if (this->head == nullptr){
         this->head = new LetterNode(letter, points, counter);
@@ -83,10 +79,8 @@ void LetterList::insertNode(string letter, int points, int counter) {
     }
 }
 
-/**
- * Method that deletes a node from the list
- * @param letter that will be deleted from the list
- */
+//! Method that deletes a node from the list
+//! \param letter that will be deleted from the list
 void LetterList::deleteNode(string letter) {
     if (this->head == nullptr){
         printf("Theres no node to delete");
@@ -107,9 +101,7 @@ void LetterList::deleteNode(string letter) {
     }
 }
 
-/**
- * Method that prints the list
- */
+//! Method that prints the list
 void LetterList::printList() {
     if (this->head == nullptr){
         printf("Lista nula");
@@ -122,12 +114,10 @@ void LetterList::printList() {
     }
 }
 
-/**
- * Method that deserializes a LetterList from a json
- * @param json that have the data
- * @param nodesArray where all the list data is
- * @return LetterList that has the letters of the player
- */
+//! Method that deserializes a LetterList from a json
+//! \param json that have the data
+//! \param nodesArray where all the list data is
+//! \return LetterList that has the letters of the player
 LetterList* LetterList::read(const QJsonObject& json, const QJsonArray& nodesArray) {
     LetterList* parsedList = new LetterList();
     if (!nodesArray.empty()){
@@ -144,12 +134,10 @@ LetterList* LetterList::read(const QJsonObject& json, const QJsonArray& nodesArr
     }
 }
 
-/**
- * Method that serializes a LetterList
- * @param json where the list will be serialized
- * @param nodesArray this is a qt array that converts the linked list to a qt array and saves it
- * @return the serialized array
- */
+//! Method that serializes a LetterList
+//! \param json where the list will be serialized
+//! \param nodesArray this is a qt array that converts the linked list to a qt array and saves it
+//! \return the serialized array
 QJsonArray& LetterList::write(QJsonObject& json, QJsonArray& nodesArray) const {
     if (this->head == nullptr){
         return nodesArray;

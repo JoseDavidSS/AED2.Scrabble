@@ -27,10 +27,8 @@ void WordList::setLenght(int lenght) {
     this->lenght = lenght;
 }
 
-/**
- * Method to add a Word to the list
- * @param word as a string
- */
+//! Method to add a Word to the list
+//! \param word as a string
 void WordList::addWord(string word) {
     if (this->head == nullptr) {
         this->head = new WordNode(word);
@@ -44,11 +42,10 @@ void WordList::addWord(string word) {
         this->lenght++;
     }
 }
-/**
- * This method opens a file which is searched in the main disk, after that it makes a comparassion betwwen every word against the searched word, when it found it the cout print it
- * @param word
- * @return
- */
+
+//! This method opens a file which is searched in the main disk, after that it makes a comparassion betwwen every word against the searched word, when it found it the cout print it
+//! \param word that will be searched
+//! \return boolean to know if the word exists or not
 bool WordList::searchWord(string word) {
     ifstream fin;
     fin.open("/home/jose/CLionProjects/Scrabble/src/tec/ac/cr/Scrabble/Logic/Lists/Dictionary/words.text");
@@ -86,10 +83,8 @@ bool WordList::searchWord(string word) {
     }
 }
 
-/**
- * Method that checks if all the words in the list
- * @return boolean to check if all the words inside the list exists or not
- */
+//! Method that checks if all the words in the list
+//! \return boolean to check if all the words inside the list exists or not
 bool WordList::checkWordsInList() {
     if (this->head == nullptr){
         return false;
