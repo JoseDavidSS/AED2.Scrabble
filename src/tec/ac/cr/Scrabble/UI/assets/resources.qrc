@@ -38,5 +38,6 @@
         <file>letters/Ll.png</file>
         <file>letters/Ch.png</file>
         <file>letters/.png</file>
+        <file>border_background.png</file>
     </qresource>
 </RCC>
