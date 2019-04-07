@@ -3,11 +3,14 @@
 //
 
 #include "draggablerectitem.h"
+#include <iostream>
 
 DraggableRectItem::DraggableRectItem(QGraphicsRectItem* parent):
         QGraphicsRectItem(parent), m_dragged(false) {
     setFlags(QGraphicsRectItem::ItemIsSelectable|
              QGraphicsRectItem::ItemIsMovable);
+    clack->setMedia(QUrl("qrc:/clack.mp3"));
+    click->setMedia(QUrl("qrc:/click.mp3"));
 }
 
 void DraggableRectItem::setAnchorPoint(const QPointF &anchorPoint) {
@@ -19,7 +22,17 @@ void DraggableRectItem::mouseMoveEvent(QGraphicsSceneMouseEvent *event) {
     QGraphicsRectItem::mouseMoveEvent(event);
 }
 
+int DraggableRectItem::randInt(int low, int high) {
+    return qrand() % ((high + 1) - low) + low;
+}
+
 void DraggableRectItem::mouseReleaseEvent(QGraphicsSceneMouseEvent *event){
+    int sound = randInt(0, 1);
+    if (sound == 0) {
+        click->play();
+    } else {
+        clack->play();
+    }
     if(m_dragged){
         QList<QGraphicsItem*> colItems = collidingItems();
         if(colItems.isEmpty())

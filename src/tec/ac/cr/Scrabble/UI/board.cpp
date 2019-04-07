@@ -58,7 +58,7 @@ Board::Board(QWidget *parent, bool isDark) :
     // Initialize default board.
     initializeBoard(isOnline);
 
-    // Plays music.
+    // Plays musica and sets sound effects.
     QMediaPlaylist *playlist = new QMediaPlaylist();
     playlist->addMedia(QUrl("qrc:/noir.mp3"));
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
@@ -66,9 +66,13 @@ Board::Board(QWidget *parent, bool isDark) :
     QMediaPlayer* background_music = new QMediaPlayer();
     background_music->setMedia(playlist);
     background_music->play();
+
+    sent->setMedia(QUrl("qrc:/sent.mp3"));
+    roll->setMedia(QUrl("qrc:/roll.mp3"));
+    ding->setMedia(QUrl("qrc:/ding.mp3"));
 }
 
-/// Adds letter to matrix in specific id from 0 to 225.
+/// Adds letter to matrix in specific id from 1 to 225.
 ///@param id
 ///@param letter
 void Board::addLetterToMatrix(int id, string letter) {
@@ -119,7 +123,7 @@ void Board::blockPlay(bool state) {
 }
 
 /// Initializes board with all of its starting default attributes with size corrections.
-/// @param isOnline boolean value if game is online
+/// @param bool value if game is online
 void Board::initializeBoard(bool isOnline){
     QRectF rect(0,0,30,30);
     double xpos = 10;
@@ -190,7 +194,12 @@ void Board::initializeBoard(bool isOnline){
     replaceLetters(letters);
 }
 
+void Board::on_expertButton_clicked() {
+    ding->play();
+}
+
 void Board::on_nextButton_clicked() {
+    sent->play();
     Matrix* matrix = Matrix::getInstance();
     Holder* holder = Holder::getInstance();
     bool turn = holder->getTurn();
@@ -229,11 +238,12 @@ void Board::on_nextButton_clicked() {
 }
 
 void Board::on_resetButton_clicked() {
+    roll->play();
     resetLetters();
 }
 
 /// Replaces draggable letters with new letter list.
-
+/// @param LetterList letter list with docked letters to replace
 void Board::replaceLetters(LetterList* letterList) {
     LetterNode* tmp = letterList->head;
     int i = 0;
@@ -256,7 +266,7 @@ void Board::resetLetters() {
 }
 
 /// Modifies room number label in GUI.
-/// @param number
+/// @param number room number
 void Board::setRoom(int number) {
     ui->roomLabel->setText("Código de sala: " + QString::number(number));
 }

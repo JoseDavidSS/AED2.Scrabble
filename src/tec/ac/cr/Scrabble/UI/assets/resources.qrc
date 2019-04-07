@@ -80,5 +80,9 @@
         <file>darkMode/letters/darkX.png</file>
         <file>darkMode/letters/darkY.png</file>
         <file>darkMode/letters/darkZ.png</file>
+        <file>click.mp3</file>
+        <file>sent.mp3</file>
+        <file>roll.mp3</file>
+        <file>ding.mp3</file>
     </qresource>
 </RCC>

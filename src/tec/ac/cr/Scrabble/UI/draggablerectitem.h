@@ -7,6 +7,8 @@
 
 #include <QGraphicsRectItem>
 #include <QGraphicsSceneMouseEvent>
+#include <QMediaPlayer>
+#include <QDateTime>
 
 
 class DraggableRectItem : public QGraphicsRectItem {
@@ -16,6 +18,7 @@ public:
     QString letter;
     DraggableRectItem(QGraphicsRectItem* parent = 0);
     void setAnchorPoint(const QPointF& anchorPoint);
+    int randInt(int low, int high);
 
 protected:
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
@@ -23,6 +26,8 @@ protected:
 
 private:
     bool m_dragged;
+    QMediaPlayer* clack = new QMediaPlayer();
+    QMediaPlayer* click = new QMediaPlayer();
 };
 
 

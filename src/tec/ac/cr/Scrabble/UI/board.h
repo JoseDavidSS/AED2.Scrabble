@@ -5,8 +5,6 @@
 #include <QGraphicsView>
 #include <QLabel>
 #include <QMediaPlayer>
-#include "scene.h"
-#include "customrectitem.h"
 #include "draggablerectitem.h"
 #include "../Logic/Lists/Matrix/Matrix.h"
 #include "../Logic/Data/Holder.h"
@@ -40,12 +38,15 @@ private:
     QGraphicsScene* scene;
     QVector<QGraphicsRectItem*> allSquares;
     QVector<DraggableRectItem*> allLetters;
-    QMediaPlayer* music = new QMediaPlayer();
+    QMediaPlayer* sent = new QMediaPlayer();
+    QMediaPlayer* roll = new QMediaPlayer();
+    QMediaPlayer* ding = new QMediaPlayer();
     bool darkMode = false;
 
 private slots:
     void on_nextButton_clicked();
     void on_resetButton_clicked();
+    void on_expertButton_clicked();
 
 };
 
