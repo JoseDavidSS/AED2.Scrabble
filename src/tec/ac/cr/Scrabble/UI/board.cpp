@@ -173,12 +173,23 @@ void Board::initializeBoard(bool isOnline){
 }
 
 void Board::on_nextButton_clicked() {
+    Holder* holder = Holder::getInstance();
+    bool turn = holder->getTurn();
     writeMatrix();
     Holder::setInstance(ASync::thread());
-    Holder* holder = Holder::getInstance();
+    holder = Holder::getInstance();
     if (holder->getValidatedPlay()) {
-
+        //Agregar que las letras se queden quietas, ya que la jugada si es valida y que lea el puntaje que tiene el holder
     }else {
+        if (!turn){
+            Matrix* matrix = Matrix::getInstance();
+            LastPlayNode* tmp = holder->lastPlayList->head;
+            while (tmp != nullptr){
+                matrix->addIndex(tmp->getLetter(), tmp->getRow(), tmp->getColumn());
+                tmp = tmp->next;
+            }
+            //Agregar aqui que se actualizen los datos de la matriz grafica con la jugada hecha por otro jugador
+        }
         LastPlayList::reset();
         resetLetters();
     }
