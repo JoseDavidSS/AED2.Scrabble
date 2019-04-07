@@ -174,12 +174,12 @@ void Board::initializeBoard(bool isOnline){
 
 void Board::on_nextButton_clicked() {
     writeMatrix();
-    Holder* holder = Holder::getInstance();
     Holder::setInstance(ASync::thread());
-    holder = Holder::getInstance();
-    if (holder->getValidatedPlay() == true) {
+    Holder* holder = Holder::getInstance();
+    if (holder->getValidatedPlay()) {
 
-    } else {
+    }else {
+        LastPlayList::reset();
         resetLetters();
     }
 }

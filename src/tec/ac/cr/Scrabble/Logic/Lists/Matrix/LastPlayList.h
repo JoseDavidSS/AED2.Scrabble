@@ -18,6 +18,7 @@ public:
 
     static LastPlayList* getInstance();
     static void setInstance(LastPlayList* nlastPlayList);
+    static void reset();
 
     LastPlayNode* head = nullptr;
 
