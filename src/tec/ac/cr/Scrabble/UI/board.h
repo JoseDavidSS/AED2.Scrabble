@@ -20,7 +20,7 @@ class Board : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Board(QWidget *parent = nullptr);
+    explicit Board(QWidget *parent = nullptr, bool isDark = false);
     ~Board();
     void addLetterToMatrix(int id, string letter);
     void assignLetter(DraggableRectItem* dItem, QString letter);
@@ -41,6 +41,7 @@ private:
     QVector<QGraphicsRectItem*> allSquares;
     QVector<DraggableRectItem*> allLetters;
     QMediaPlayer* music = new QMediaPlayer();
+    bool darkMode = false;
 
 private slots:
     void on_nextButton_clicked();

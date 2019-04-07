@@ -16,7 +16,7 @@
 #include <iostream>
 
 using namespace std;
-Board::Board(QWidget *parent) :
+Board::Board(QWidget *parent, bool isDark) :
     // Main setup of board UI elements.
     QMainWindow(parent),
     ui(new Ui::Board) {
@@ -33,12 +33,6 @@ Board::Board(QWidget *parent) :
     view->setScene(scene);
     view->setFixedSize(width, height);
     view->setStyleSheet("background: transparent");
-    QMovie* movie = new QMovie("qrc:/fireplace.gif");
-    ui->fireplace->setMovie(movie);
-    movie->start();
-    ui->fireplace->show();
-    ui->fireplace->raise();
-
 
     // Checks if connection with server is established for offline tests if necessary.
     Holder* holder = Holder::getInstance();
@@ -48,6 +42,20 @@ Board::Board(QWidget *parent) :
     } else {
         isOnline = false;
     }
+
+    // If dark mode is selected, change UI elements.
+    if (isDark) {
+        darkMode = true;
+        cout << darkMode << endl;
+        ui->board->setPixmap(QPixmap("://darkMode/darkboard.png"));
+        ui->nextButton->setIcon(QIcon("://darkMode/dark_nextButtonIcon.png"));
+        ui->resetButton->setIcon(QIcon("://darkMode/dark_resetButtonIcon.png"));
+        ui->expertButton->setIcon(QIcon("://darkMode/dark_expertButtonIcon.png"));
+        ui->leatherBackground->setPixmap(QPixmap("://darkMode/dark_roundLeather.png"));
+        ui->border_background->setPixmap(QPixmap("://darkMode/darkborder_background.png"));
+    }
+
+    // Initialize default board.
     initializeBoard(isOnline);
 
     // Plays music.
@@ -76,7 +84,12 @@ void Board::addLetterToMatrix(int id, string letter) {
 /// @param dItem
 /// @param letter
 void Board::assignLetter(DraggableRectItem* dItem, QString letter) {
-    QString dir = "://letters/" + letter + ".png";
+    QString dir;
+    if (darkMode == true) {
+        dir = "://darkMode/letters/dark" + letter + ".png";
+    } else {
+        dir = "://letters/" + letter + ".png";
+    }
     QPixmap pixmap = QPixmap(dir);
     QPixmap scaled = pixmap.scaled(30,30);
     dItem->setBrush(QBrush(scaled));
@@ -86,7 +99,12 @@ void Board::assignLetter(DraggableRectItem* dItem, QString letter) {
 /// @param item
 /// @param letter
 void Board::assignLetter(QGraphicsRectItem* item, QString letter) {
-    QString dir = "://letters/" + letter + ".png";
+    QString dir;
+    if (darkMode) {
+        dir = "://darkMode/letters/dark" + letter + ".png";
+    } else {
+        dir = "://letters/" + letter + ".png";
+    }
     QPixmap pixmap = QPixmap(dir);
     QPixmap scaled = pixmap.scaled(30,30);
     item->setBrush(QBrush(scaled));
