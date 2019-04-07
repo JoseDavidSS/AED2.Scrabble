@@ -12,8 +12,8 @@ ConnectWindow::~ConnectWindow() {
     delete ui;
 }
 
-void ConnectWindow::toBoard() {
-    board = new Board(this);
+void ConnectWindow::toBoard(bool isDark = false) {
+    board = new Board(this, isDark);
     board->show();
 }
 
@@ -32,7 +32,7 @@ void ConnectWindow::on_hostButton_clicked() {
     holder->setPlayerName(ui->nameEntry->displayText().toStdString());
     holder->setPoints(ui->playerQuant->currentText().toInt());
     Holder::setInstance(ASync::thread());
-    toBoard();
+    toBoard(ui->darkModeCheck->isChecked());
     hide();
 }
 

@@ -17,7 +17,7 @@ public:
     Holder* holder = Holder::getInstance();
 
 public slots:
-       void toBoard();
+       void toBoard(bool isDark);
 
 protected:
     void changeEvent(QEvent *e);

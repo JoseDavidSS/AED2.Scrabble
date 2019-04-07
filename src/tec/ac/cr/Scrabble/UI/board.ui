@@ -236,19 +236,6 @@ background-color: transparent</string>
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="fireplace">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>310</y>
-      <width>61</width>
-      <height>19</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-   </widget>
    <zorder>border_background</zorder>
    <zorder>leatherBackground</zorder>
    <zorder>board</zorder>
@@ -259,7 +246,6 @@ background-color: transparent</string>
    <zorder>marmota</zorder>
    <zorder>pointsLabel</zorder>
    <zorder>roomLabel</zorder>
-   <zorder>fireplace</zorder>
   </widget>
  </widget>
  <resources>

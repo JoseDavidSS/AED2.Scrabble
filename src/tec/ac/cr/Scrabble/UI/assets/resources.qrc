@@ -46,5 +46,39 @@
         <file>noir.mp3</file>
         <file>roundLeather.png</file>
         <file>fireplace.gif</file>
+        <file>darkMode/darkboard.png</file>
+        <file>darkMode/darkborder_background.png</file>
+        <file>darkMode/dark_expertButtonIcon.png</file>
+        <file>darkMode/dark_nextButtonIcon.png</file>
+        <file>darkMode/dark_resetButtonIcon.png</file>
+        <file>darkMode/dark_roundLeather.png</file>
+        <file>darkMode/letters/darkA.png</file>
+        <file>darkMode/letters/darkB.png</file>
+        <file>darkMode/letters/darkC.png</file>
+        <file>darkMode/letters/darkCh.png</file>
+        <file>darkMode/letters/darkD.png</file>
+        <file>darkMode/letters/darkE.png</file>
+        <file>darkMode/letters/darkF.png</file>
+        <file>darkMode/letters/darkG.png</file>
+        <file>darkMode/letters/darkH.png</file>
+        <file>darkMode/letters/darkI.png</file>
+        <file>darkMode/letters/darkJ.png</file>
+        <file>darkMode/letters/darkL.png</file>
+        <file>darkMode/letters/darkLl.png</file>
+        <file>darkMode/letters/darkM.png</file>
+        <file>darkMode/letters/darkN.png</file>
+        <file>darkMode/letters/darkÑ.png</file>
+        <file>darkMode/letters/darkO.png</file>
+        <file>darkMode/letters/darkP.png</file>
+        <file>darkMode/letters/darkQ.png</file>
+        <file>darkMode/letters/darkR.png</file>
+        <file>darkMode/letters/darkRR.png</file>
+        <file>darkMode/letters/darkS.png</file>
+        <file>darkMode/letters/darkT.png</file>
+        <file>darkMode/letters/darkU.png</file>
+        <file>darkMode/letters/darkV.png</file>
+        <file>darkMode/letters/darkX.png</file>
+        <file>darkMode/letters/darkY.png</file>
+        <file>darkMode/letters/darkZ.png</file>
     </qresource>
 </RCC>
