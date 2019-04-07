@@ -173,22 +173,37 @@ void Board::initializeBoard(bool isOnline){
 }
 
 void Board::on_nextButton_clicked() {
+    Matrix* matrix = Matrix::getInstance();
     Holder* holder = Holder::getInstance();
     bool turn = holder->getTurn();
     writeMatrix();
     Holder::setInstance(ASync::thread());
     holder = Holder::getInstance();
     if (holder->getValidatedPlay()) {
-        //Agregar que las letras se queden quietas, ya que la jugada si es valida y que lea el puntaje que tiene el holder
+        holder->setValidatedPlay(false);
+        updateBoard(matrix);
+        updatePoints(holder->getPoints());
+        replaceLetters(holder->letterList);
+        LastPlayList::reset();
     }else {
         if (!turn){
-            Matrix* matrix = Matrix::getInstance();
-            LastPlayNode* tmp = holder->lastPlayList->head;
-            while (tmp != nullptr){
-                matrix->addIndex(tmp->getLetter(), tmp->getRow(), tmp->getColumn());
-                tmp = tmp->next;
+            if (holder->lastPlayList != nullptr){
+                LastPlayNode* tmp = holder->lastPlayList->head;
+                if (tmp != nullptr){
+                    while (tmp != nullptr){
+                        matrix->addIndex(tmp->getLetter(), tmp->getRow(), tmp->getColumn());
+                        tmp = tmp->next;
+                    }
+                    updateBoard(matrix);
+                    LastPlayList::reset();
+                }
             }
-            //Agregar aqui que se actualizen los datos de la matriz grafica con la jugada hecha por otro jugador
+        }
+        LastPlayList* lastPlayList = LastPlayList::getInstance();
+        LastPlayNode* tmp = lastPlayList->head;
+        while (tmp != nullptr){
+            matrix->deleteIndex(tmp->getLetter(), tmp->getRow(), tmp->getColumn());
+            tmp = tmp->next;
         }
         LastPlayList::reset();
         resetLetters();
