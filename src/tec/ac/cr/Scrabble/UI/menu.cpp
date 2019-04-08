@@ -1,5 +1,6 @@
 #include "menu.h"
 #include "ui_menu.h"
+#include "../Logic/Data/Phone.h"
 
 Menu::Menu(QWidget *parent) :
     QMainWindow(parent),
@@ -14,6 +15,11 @@ Menu::~Menu() {
 void Menu::toConnectWindow() {
     connectWindow = new ConnectWindow(this);
     connectWindow->show();
+    Phone* iPhone = new Phone();
+    QString message = "Another one bites the dust";
+    //iPhone->sendSMS(message);
+    QString reply = iPhone->getSMS();
+    cout << reply.toStdString() << endl;
 }
 
 void Menu::toMarmotaWindow() {
