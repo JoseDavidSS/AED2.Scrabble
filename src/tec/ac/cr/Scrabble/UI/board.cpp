@@ -89,7 +89,7 @@ void Board::addLetterToMatrix(int id, string letter) {
 /// @param letter
 void Board::assignLetter(DraggableRectItem* dItem, QString letter) {
     QString dir;
-    if (darkMode == true) {
+    if (darkMode) {
         dir = "://darkMode/letters/dark" + letter + ".png";
     } else {
         dir = "://letters/" + letter + ".png";
@@ -176,7 +176,11 @@ void Board::initializeBoard(bool isOnline){
     LetterList* letters;
 
     if (isOnline) {
+        if (!holder->getTurn()){
+            blockPlay(true);
+        }
         setRoom(holder->getCodeToEnter());
+        updatePoints(0);
         letters = holder->letterList;
     } else {
         LetterList* defaultList = new LetterList();
@@ -187,7 +191,7 @@ void Board::initializeBoard(bool isOnline){
         defaultList->insertNode("E", 1, 0);
         defaultList->insertNode("F", 1, 0);
         defaultList->insertNode("G", 1, 0);
-        defaultList->insertNode("H", 1, 0);
+        defaultList->insertNode("", 1, 0);
         letters = defaultList;
         ui->marmota->setText("offline.");
     }
@@ -206,8 +210,11 @@ void Board::on_nextButton_clicked() {
     writeMatrix();
     Holder::setInstance(ASync::thread());
     holder = Holder::getInstance();
-    if (holder->getValidatedPlay()) {
+    if (holder->getTurn()){
+        blockPlay(false);
+    }if (holder->getValidatedPlay()) {
         holder->setValidatedPlay(false);
+        blockPlay(true);
         updateBoard(matrix);
         updatePoints(holder->getPoints());
         replaceLetters(holder->letterList);
@@ -217,6 +224,12 @@ void Board::on_nextButton_clicked() {
             if (holder->lastPlayList != nullptr){
                 LastPlayNode* tmp = holder->lastPlayList->head;
                 if (tmp != nullptr){
+                    LastPlayList* lastPlayList = LastPlayList::getInstance();
+                    LastPlayNode* tmp2 = lastPlayList->head;
+                    while (tmp2 != nullptr){
+                        matrix->deleteIndex(tmp2->getLetter(), tmp2->getRow(), tmp2->getColumn());
+                        tmp2 = tmp2->next;
+                    }
                     while (tmp != nullptr){
                         matrix->addIndex(tmp->getLetter(), tmp->getRow(), tmp->getColumn());
                         tmp = tmp->next;
