@@ -45,7 +45,6 @@
         <file>clack.mp3</file>
         <file>noir.mp3</file>
         <file>roundLeather.png</file>
-        <file>fireplace.gif</file>
         <file>darkMode/darkboard.png</file>
         <file>darkMode/darkborder_background.png</file>
         <file>darkMode/dark_expertButtonIcon.png</file>
@@ -84,5 +83,21 @@
         <file>sent.mp3</file>
         <file>roll.mp3</file>
         <file>ding.mp3</file>
+        <file>goldframe.png</file>
+        <file>aboutIcon.png</file>
+        <file>marmotas/marmota1.jpg</file>
+        <file>marmotas/marmota2.jpg</file>
+        <file>marmotas/marmota3.png</file>
+        <file>marmotas/marmota4.jpg</file>
+        <file>marmotas/marmota5.jpg</file>
+        <file>marmotas/marmota6.jpg</file>
+    </qresource>
+    <qresource prefix="/marmotas">
+        <file>marmotas/marmota1.jpg</file>
+        <file>marmotas/marmota2.jpg</file>
+        <file>marmotas/marmota3.png</file>
+        <file>marmotas/marmota4.jpg</file>
+        <file>marmotas/marmota5.jpg</file>
+        <file>marmotas/marmota6.jpg</file>
     </qresource>
 </RCC>

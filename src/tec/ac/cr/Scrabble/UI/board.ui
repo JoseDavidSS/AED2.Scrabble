@@ -65,7 +65,7 @@
      <string notr="true">color: white</string>
     </property>
     <property name="text">
-     <string>© CMarmotas. 2019</string>
+     <string>#ElPoderDeLaMarmota</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

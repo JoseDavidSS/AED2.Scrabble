@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "connectwindow.h"
+#include "marmota.h"
 
 namespace Ui {
 class Menu;
@@ -18,16 +19,19 @@ public:
 
 public slots:
        void toConnectWindow();
+       void toMarmotaWindow();
 
 protected:
     void changeEvent(QEvent *e);
 
 private:
     Ui::Menu *ui;
-    ConnectWindow *connectWindow;
+    ConnectWindow*connectWindow;
+    marmota* marmotawindow;
 
 private slots:
         void on_playButton_clicked();
+        void on_infoButton_clicked();
 };
 
 #endif // MENU_H

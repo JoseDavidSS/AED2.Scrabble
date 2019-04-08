@@ -16,6 +16,11 @@ void Menu::toConnectWindow() {
     connectWindow->show();
 }
 
+void Menu::toMarmotaWindow() {
+    marmotawindow = new marmota(this);
+    marmotawindow->show();
+}
+
 void Menu::changeEvent(QEvent *e) {
     QMainWindow::changeEvent(e);
     switch (e->type()) {
@@ -29,5 +34,10 @@ void Menu::changeEvent(QEvent *e) {
 
 void Menu::on_playButton_clicked() {
     toConnectWindow();
+    hide();
+}
+
+void Menu::on_infoButton_clicked() {
+    toMarmotaWindow();
     hide();
 }
