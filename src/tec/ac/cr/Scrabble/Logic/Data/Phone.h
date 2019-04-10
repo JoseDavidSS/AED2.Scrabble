@@ -29,7 +29,8 @@ public:
     QString getSMS();
 
 private:
-    const QString expert = "%2B50684280167";
+    //const QString expert = "%2B50684280167";
+    const QString expert = "%2B50687062481";
     const QString scrabble = "%2B12056357334";
     const QString gringo = "%2B16318328474";
     const QString sid = "ACb3e903228a71b7babed4beec9a56af8d";

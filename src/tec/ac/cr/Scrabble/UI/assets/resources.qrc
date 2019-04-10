@@ -91,6 +91,7 @@
         <file>marmotas/marmota4.jpg</file>
         <file>marmotas/marmota5.jpg</file>
         <file>marmotas/marmota6.jpg</file>
+        <file>darkMode/letters/dark.png</file>
     </qresource>
     <qresource prefix="/marmotas">
         <file>marmotas/marmota1.jpg</file>

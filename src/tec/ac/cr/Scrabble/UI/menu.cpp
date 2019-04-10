@@ -16,10 +16,8 @@ void Menu::toConnectWindow() {
     connectWindow = new ConnectWindow(this);
     connectWindow->show();
     Phone* iPhone = new Phone();
-    QString message = "Another one bites the dust";
+    QString message = "Las rosas son rojas, las violetas azules, Chus es un sobo y le gusta la pinga de oso groso y venosos, AYJA !!!";
     //iPhone->sendSMS(message);
-    QString reply = iPhone->getSMS();
-    cout << reply.toStdString() << endl;
 }
 
 void Menu::toMarmotaWindow() {
